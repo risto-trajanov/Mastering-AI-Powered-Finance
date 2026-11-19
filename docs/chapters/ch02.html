@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 2: The Importance of Data – Mastering AI-Powered Finance: Companion</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch02.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch02.html">2. The Importance of Data</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Mastering AI-Powered Finance: Companion</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">2. The Importance of Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Machine Learning Techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Generative AI in Finance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. AI Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. AI and Algorithmic Trading Strategies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Socio-Technical Transformation of Algo Trading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. AI-Powered Equity Investing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. AI in Portfolio Optimization</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#code-from-the-chapter" id="toc-code-from-the-chapter" class="nav-link active" data-scroll-target="#code-from-the-chapter">Code from the Chapter</a>
+  <ul class="collapse">
+  <li><a href="#data-cleaning-and-processing" id="toc-data-cleaning-and-processing" class="nav-link" data-scroll-target="#data-cleaning-and-processing">Data Cleaning and Processing</a>
+  <ul class="collapse">
+  <li><a href="#handling-missing-data-deletion-methods" id="toc-handling-missing-data-deletion-methods" class="nav-link" data-scroll-target="#handling-missing-data-deletion-methods">Handling Missing Data / Deletion methods</a></li>
+  <li><a href="#handling-missing-data-single-imputation" id="toc-handling-missing-data-single-imputation" class="nav-link" data-scroll-target="#handling-missing-data-single-imputation">Handling Missing Data / Single imputation</a></li>
+  <li><a href="#handling-missing-data-time-series-imputation" id="toc-handling-missing-data-time-series-imputation" class="nav-link" data-scroll-target="#handling-missing-data-time-series-imputation">Handling Missing Data / Time-series imputation</a></li>
+  <li><a href="#handling-missing-data-advanced-model-based-imputation" id="toc-handling-missing-data-advanced-model-based-imputation" class="nav-link" data-scroll-target="#handling-missing-data-advanced-model-based-imputation">Handling Missing Data / Advanced, model-based imputation</a></li>
+  <li><a href="#outliers" id="toc-outliers" class="nav-link" data-scroll-target="#outliers">Outliers</a></li>
+  <li><a href="#outliers-what-to-do-about-them" id="toc-outliers-what-to-do-about-them" class="nav-link" data-scroll-target="#outliers-what-to-do-about-them">Outliers / What to do about them</a></li>
+  <li><a href="#handling-imbalanced-data-under-sampling-the-majority-class" id="toc-handling-imbalanced-data-under-sampling-the-majority-class" class="nav-link" data-scroll-target="#handling-imbalanced-data-under-sampling-the-majority-class">Handling Imbalanced Data / Under-sampling the majority class</a></li>
+  <li><a href="#handling-imbalanced-data-oversampling-the-minority-class" id="toc-handling-imbalanced-data-oversampling-the-minority-class" class="nav-link" data-scroll-target="#handling-imbalanced-data-oversampling-the-minority-class">Handling Imbalanced Data / Oversampling the minority class</a></li>
+  <li><a href="#handling-imbalanced-data-smote-synthetic-minority-over-sampling-technique" id="toc-handling-imbalanced-data-smote-synthetic-minority-over-sampling-technique" class="nav-link" data-scroll-target="#handling-imbalanced-data-smote-synthetic-minority-over-sampling-technique">Handling Imbalanced Data / SMOTE (Synthetic Minority Over-sampling Technique)</a></li>
+  </ul></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#univariate-analysis-profiling-a-single-variable" id="toc-univariate-analysis-profiling-a-single-variable" class="nav-link" data-scroll-target="#univariate-analysis-profiling-a-single-variable">Univariate Analysis: Profiling a Single Variable</a></li>
+  <li><a href="#univariate-analysis-profiling-a-single-variable-central-tendency" id="toc-univariate-analysis-profiling-a-single-variable-central-tendency" class="nav-link" data-scroll-target="#univariate-analysis-profiling-a-single-variable-central-tendency">Univariate Analysis: Profiling a Single Variable / Central tendency</a></li>
+  <li><a href="#univariate-analysis-profiling-a-single-variable-dispersion" id="toc-univariate-analysis-profiling-a-single-variable-dispersion" class="nav-link" data-scroll-target="#univariate-analysis-profiling-a-single-variable-dispersion">Univariate Analysis: Profiling a Single Variable / Dispersion</a></li>
+  <li><a href="#univariate-analysis-profiling-a-single-variable-shape-skew-and-tails" id="toc-univariate-analysis-profiling-a-single-variable-shape-skew-and-tails" class="nav-link" data-scroll-target="#univariate-analysis-profiling-a-single-variable-shape-skew-and-tails">Univariate Analysis: Profiling a Single Variable / Shape: skew and tails</a></li>
+  <li><a href="#bi-variate-analysis-uncovering-relationships" id="toc-bi-variate-analysis-uncovering-relationships" class="nav-link" data-scroll-target="#bi-variate-analysis-uncovering-relationships">Bi-variate Analysis: Uncovering Relationships</a></li>
+  <li><a href="#bi-variate-analysis-uncovering-relationships-seeing-the-relationship" id="toc-bi-variate-analysis-uncovering-relationships-seeing-the-relationship" class="nav-link" data-scroll-target="#bi-variate-analysis-uncovering-relationships-seeing-the-relationship">Bi-variate Analysis: Uncovering Relationships / Seeing the relationship</a></li>
+  <li><a href="#time-series-exploration-market-dynamics-over-time" id="toc-time-series-exploration-market-dynamics-over-time" class="nav-link" data-scroll-target="#time-series-exploration-market-dynamics-over-time">Time-Series Exploration: Market Dynamics Over Time</a></li>
+  </ul></li>
+  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering">Feature Engineering</a>
+  <ul class="collapse">
+  <li><a href="#numerical-data-continuous-data" id="toc-numerical-data-continuous-data" class="nav-link" data-scroll-target="#numerical-data-continuous-data">Numerical Data / Continuous Data</a></li>
+  <li><a href="#numerical-data-discrete-data" id="toc-numerical-data-discrete-data" class="nav-link" data-scroll-target="#numerical-data-discrete-data">Numerical Data / Discrete Data</a></li>
+  <li><a href="#categorical-data-nominal-data" id="toc-categorical-data-nominal-data" class="nav-link" data-scroll-target="#categorical-data-nominal-data">Categorical Data / Nominal Data</a></li>
+  <li><a href="#categorical-data-ordinal-data" id="toc-categorical-data-ordinal-data" class="nav-link" data-scroll-target="#categorical-data-ordinal-data">Categorical Data / Ordinal Data</a></li>
+  <li><a href="#date-and-time" id="toc-date-and-time" class="nav-link" data-scroll-target="#date-and-time">Date and Time</a></li>
+  <li><a href="#time-series-data" id="toc-time-series-data" class="nav-link" data-scroll-target="#time-series-data">Time-Series Data</a></li>
+  <li><a href="#textual-data" id="toc-textual-data" class="nav-link" data-scroll-target="#textual-data">Textual Data</a></li>
+  <li><a href="#boolean-data" id="toc-boolean-data" class="nav-link" data-scroll-target="#boolean-data">Boolean Data</a></li>
+  <li><a href="#document-data" id="toc-document-data" class="nav-link" data-scroll-target="#document-data">Document Data</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#ai-tutorial-preprocessing-loan-application-data-for-approval-prediction" id="toc-ai-tutorial-preprocessing-loan-application-data-for-approval-prediction" class="nav-link" data-scroll-target="#ai-tutorial-preprocessing-loan-application-data-for-approval-prediction">AI Tutorial: Preprocessing Loan Application Data for Approval Prediction</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-data-analysis-1" id="toc-exploratory-data-analysis-1" class="nav-link" data-scroll-target="#exploratory-data-analysis-1">Exploratory Data Analysis</a></li>
+  <li><a href="#feature-engineering-1" id="toc-feature-engineering-1" class="nav-link" data-scroll-target="#feature-engineering-1">Feature Engineering</a>
+  <ul class="collapse">
+  <li><a href="#preprocessing-impact" id="toc-preprocessing-impact" class="nav-link" data-scroll-target="#preprocessing-impact">Preprocessing Impact</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch02.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch02.html">2. The Importance of Data</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 2: The Importance of Data</h1>
+<p class="subtitle lead">Code from the chapter and AI tutorial</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page accompanies Chapter 2 of <em>Mastering AI-Powered Finance</em>. Use cases, practical activities, and discussion topics are in the printed chapter. Section, equation, and figure numbers that are not on this page refer to the printed chapter.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Before you run this">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Before you run this
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Notebook:</strong> <a href="../downloads/chapter-02-the-importance-of-data.ipynb" download="chapter-02-the-importance-of-data.ipynb">Download the notebook</a> or <a href="../downloads/chapter-02-the-importance-of-data.zip" download="chapter-02-the-importance-of-data.zip">the notebook with its data files</a>. The notebook is the reviewed, runnable version of this tutorial, with saved outputs; its code can differ in places from the listings on this page.</li>
+<li><strong>Packages:</strong> <code>imbalanced-learn</code>, <code>matplotlib</code>, <code>numpy</code>, <code>pandas</code>, <code>scikit-learn</code>, <code>scipy</code>, <code>seaborn</code>, <code>sentence-transformers</code>, <code>statsmodels</code>, <code>yfinance</code>.</li>
+<li><strong>Data:</strong> <code>data/loan_data.csv</code>, <code>data/loan_preprocessed.csv</code>, <code>data/prices_2020_2024.csv</code> (included in the download with data files).</li>
+<li><strong>API key:</strong> none needed.</li>
+</ul>
+</div>
+</div>
+<section id="code-from-the-chapter" class="level1">
+<h1>Code from the Chapter</h1>
+<p>This section collects the Python code behind the examples, numbers, and figures in the printed Chapter 2, in the order of the chapter’s sections. The short cleaning and feature-engineering snippets are fragments: they assume a DataFrame <code>df</code> with the columns they name. The exploratory data analysis code loads adjusted daily prices for Apple, Microsoft, and Alphabet over 2020–2024 from the price snapshot bundled with the chapter’s companion notebook, and the later EDA snippets build on the <code>df</code> and <code>aapl</code> frames it creates, so run them in order. The companion notebook contains the same code, with small synthetic DataFrames that make the fragments run. Some of these examples belong to sections that were shortened in the printed chapter.</p>
+<section id="data-cleaning-and-processing" class="level2">
+<h2 class="anchored" data-anchor-id="data-cleaning-and-processing">Data Cleaning and Processing</h2>
+<section id="handling-missing-data-deletion-methods" class="level3">
+<h3 class="anchored" data-anchor-id="handling-missing-data-deletion-methods">Handling Missing Data / Deletion methods</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove rows where 'pe_ratio' is missing</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>complete_cases <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">'pe_ratio'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop a column if it has more than 30% missing values</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>reduced_columns <span class="op">=</span> df.copy()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> df[<span class="st">'some_feature'</span>].isnull().mean() <span class="op">&gt;</span> <span class="fl">0.3</span>:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    reduced_columns <span class="op">=</span> reduced_columns.drop(columns<span class="op">=</span>[<span class="st">'some_feature'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="handling-missing-data-single-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="handling-missing-data-single-imputation">Handling Missing Data / Single imputation</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing P/E with the median of its sector</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>median_imputed <span class="op">=</span> df.copy()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>median_imputed[<span class="st">'pe_ratio'</span>] <span class="op">=</span> df[<span class="st">'pe_ratio'</span>].fillna(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    df.groupby(<span class="st">'sector'</span>)[<span class="st">'pe_ratio'</span>].transform(<span class="st">'median'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a flag for missing values</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'pe_ratio_was_missing'</span>] <span class="op">=</span> df[<span class="st">'pe_ratio'</span>].isnull().astype(<span class="bu">int</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impute with a sentinel value</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'pe_ratio'</span>] <span class="op">=</span> df[<span class="st">'pe_ratio'</span>].fillna(<span class="op">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="handling-missing-data-time-series-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="handling-missing-data-time-series-imputation">Handling Missing Data / Time-series imputation</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Forward fill missing daily prices</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'price'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].ffill()  <span class="co"># Stale valuation marks, not new trades</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrospective interpolation uses future endpoints; do not use as-of features.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'rate_retrospective'</span>] <span class="op">=</span> df[<span class="st">'interest_rate'</span>].interpolate(method<span class="op">=</span><span class="st">'linear'</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Past-only alternative for an as-of known rate:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'interest_rate'</span>] <span class="op">=</span> df[<span class="st">'interest_rate'</span>].ffill()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="handling-missing-data-advanced-model-based-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="handling-missing-data-advanced-model-based-imputation">Handling Missing Data / Advanced, model-based imputation</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> KNNImputer</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>imputer <span class="op">=</span> KNNImputer(n_neighbors<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select numeric columns for imputation</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>numeric_cols <span class="op">=</span> [<span class="st">'market_cap'</span>, <span class="st">'assets'</span>, <span class="st">'revenue'</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>scale <span class="op">=</span> StandardScaler()</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>scaled <span class="op">=</span> scale.fit_transform(df[numeric_cols])</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>df[numeric_cols] <span class="op">=</span> scale.inverse_transform(imputer.fit_transform(scaled))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.experimental <span class="im">import</span> enable_iterative_imputer</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> IterativeImputer</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>imputer <span class="op">=</span> IterativeImputer(max_iter<span class="op">=</span><span class="dv">10</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>numeric_cols <span class="op">=</span> [<span class="st">'feature1'</span>, <span class="st">'feature2'</span>, <span class="st">'feature3'</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>df[numeric_cols] <span class="op">=</span> imputer.fit_transform(df[numeric_cols])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="outliers" class="level3">
+<h3 class="anchored" data-anchor-id="outliers">Outliers</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify outliers using the Interquartile Range (IQR) rule</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Q1 <span class="op">=</span> df[<span class="st">'returns'</span>].quantile(<span class="fl">0.25</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Q3 <span class="op">=</span> df[<span class="st">'returns'</span>].quantile(<span class="fl">0.75</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>IQR <span class="op">=</span> Q3 <span class="op">-</span> Q1</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>lower_bound <span class="op">=</span> Q1 <span class="op">-</span> <span class="fl">1.5</span> <span class="op">*</span> IQR</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>upper_bound <span class="op">=</span> Q3 <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> IQR</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>outliers <span class="op">=</span> df[(df[<span class="st">'returns'</span>] <span class="op">&lt;</span> lower_bound) <span class="op">|</span> (df[<span class="st">'returns'</span>] <span class="op">&gt;</span> upper_bound)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the robust z-score for a series</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> median_abs_deviation</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>median <span class="op">=</span> df[<span class="st">'returns'</span>].median()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate MAD for the non-missing values</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>mad <span class="op">=</span> median_abs_deviation(df[<span class="st">'returns'</span>].dropna())</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'robust_z'</span>] <span class="op">=</span> (<span class="fl">0.6745</span> <span class="op">*</span> (df[<span class="st">'returns'</span>] <span class="op">-</span> median) <span class="op">/</span> mad</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">if</span> pd.notna(mad) <span class="kw">and</span> mad <span class="op">&gt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="bu">float</span>(<span class="st">'nan'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use Isolation Forest for multi-dimensional outlier detection</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> IsolationForest</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select features to use for detection, dropping any rows with NaNs</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> df[[<span class="st">'returns'</span>, <span class="st">'volume'</span>]].dropna()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>iso_forest <span class="op">=</span> IsolationForest(contamination<span class="op">=</span><span class="st">'auto'</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># fit_predict returns -1 for outliers and 1 for inliers</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>outlier_preds <span class="op">=</span> iso_forest.fit_predict(features)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>features[<span class="st">'is_outlier'</span>] <span class="op">=</span> outlier_preds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="outliers-what-to-do-about-them" class="level3">
+<h3 class="anchored" data-anchor-id="outliers-what-to-do-about-them">Outliers / What to do about them</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fix a known decimal slip on a specific date</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>error_date <span class="op">=</span> <span class="st">'2025-09-18'</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> error_date <span class="kw">in</span> df.index:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    df.loc[error_date, <span class="st">'price'</span>] <span class="op">=</span> df.loc[error_date, <span class="st">'price'</span>] <span class="op">/</span> <span class="dv">10</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>error_date<span class="sc">}</span><span class="ss"> is not present in this sample; no correction applied."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Drop a row corresponding to a non-repairable error when it exists</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> error_date <span class="kw">in</span> df.index:</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    df.drop(index<span class="op">=</span>error_date, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>error_date<span class="sc">}</span><span class="ss"> is not present in this sample; no row dropped."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cap returns at the 1st and 99th percentiles</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>lower_b <span class="op">=</span> df[<span class="st">'returns'</span>].quantile(<span class="fl">0.01</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>upper_b <span class="op">=</span> df[<span class="st">'returns'</span>].quantile(<span class="fl">0.99</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'returns_capped'</span>] <span class="op">=</span> df[<span class="st">'returns'</span>].clip(lower<span class="op">=</span>lower_b, upper<span class="op">=</span>upper_b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate proportional log changes; variance need not be constant</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'log_returns'</span>] <span class="op">=</span> np.log(df[<span class="st">'price'</span>] <span class="op">/</span> df[<span class="st">'price'</span>].shift(<span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="handling-imbalanced-data-under-sampling-the-majority-class" class="level3">
+<h3 class="anchored" data-anchor-id="handling-imbalanced-data-under-sampling-the-majority-class">Handling Imbalanced Data / Under-sampling the majority class</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.utils <span class="im">import</span> resample</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># IID illustration: split first; use time-aware splits for chronological data.</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>fraud_train, fraud_test <span class="op">=</span> train_test_split(</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    df, test_size<span class="op">=</span><span class="fl">0.25</span>, stratify<span class="op">=</span>df[<span class="st">'is_fraud'</span>], random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Resample training rows only; keep fraud_test at its original prevalence.</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>df_majority <span class="op">=</span> fraud_train[fraud_train[<span class="st">'is_fraud'</span>] <span class="op">==</span> <span class="dv">0</span>]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>df_minority <span class="op">=</span> fraud_train[fraud_train[<span class="st">'is_fraud'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Undersample majority class to match minority class</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>df_majority_undersampled <span class="op">=</span> resample(</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    df_majority,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    replace<span class="op">=</span><span class="va">False</span>,  <span class="co"># Sample without replacement</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    n_samples<span class="op">=</span><span class="bu">len</span>(df_minority),  <span class="co"># Match minority class size</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine minority class with undersampled majority class</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>df_balanced <span class="op">=</span> pd.concat([df_majority_undersampled, df_minority])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="handling-imbalanced-data-oversampling-the-minority-class" class="level3">
+<h3 class="anchored" data-anchor-id="handling-imbalanced-data-oversampling-the-minority-class">Handling Imbalanced Data / Oversampling the minority class</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Oversample minority class to match majority class</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>df_minority_oversampled <span class="op">=</span> resample(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    df_minority,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    replace<span class="op">=</span><span class="va">True</span>,  <span class="co"># Sample with replacement (allows duplicates)</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    n_samples<span class="op">=</span><span class="bu">len</span>(df_majority),  <span class="co"># Match majority class size</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    random_state<span class="op">=</span><span class="dv">42</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine oversampled minority class with majority class</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>df_balanced <span class="op">=</span> pd.concat([df_majority, df_minority_oversampled])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="handling-imbalanced-data-smote-synthetic-minority-over-sampling-technique" class="level3">
+<h3 class="anchored" data-anchor-id="handling-imbalanced-data-smote-synthetic-minority-over-sampling-technique">Handling Imbalanced Data / SMOTE (Synthetic Minority Over-sampling Technique)</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> imblearn.over_sampling <span class="im">import</span> SMOTE</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare features and target</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> fraud_train.drop(<span class="st">'is_fraud'</span>, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> fraud_train[<span class="st">'is_fraud'</span>]</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>smote_scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>X_scaled <span class="op">=</span> smote_scaler.fit_transform(X)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>X_test_scaled <span class="op">=</span> smote_scaler.transform(fraud_test.drop(<span class="st">'is_fraud'</span>, axis<span class="op">=</span><span class="dv">1</span>))</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply SMOTE to generate synthetic minority examples</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>smote <span class="op">=</span> SMOTE(random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>X_resampled, y_resampled <span class="op">=</span> smote.fit_resample(X_scaled, y)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="co"># SMOTE can produce fractional counts; these are synthetic, not transactions.</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Original class distribution: </span><span class="sc">{</span>y<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Resampled class distribution: </span><span class="sc">{</span>pd<span class="sc">.</span>Series(y_resampled)<span class="sc">.</span>value_counts()<span class="sc">.</span>to_dict()<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<section id="univariate-analysis-profiling-a-single-variable" class="level3">
+<h3 class="anchored" data-anchor-id="univariate-analysis-profiling-a-single-variable">Univariate Analysis: Profiling a Single Variable</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The tickers we want</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>tickers <span class="op">=</span> [<span class="st">"AAPL"</span>, <span class="st">"MSFT"</span>, <span class="st">"GOOGL"</span>]</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># The bundled snapshot keeps the statistics below reproducible: auto_adjust</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co"># back-adjusts the whole history on every dividend, so a live download drifts</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co"># after publication. Set REFRESH_MARKET_DATA=1 to fetch current data instead.</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>SNAPSHOT <span class="op">=</span> Path(<span class="st">"data/prices_2020_2024.csv"</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> SNAPSHOT.exists() <span class="kw">and</span> os.environ.get(<span class="st">"REFRESH_MARKET_DATA"</span>) <span class="op">!=</span> <span class="st">"1"</span>:</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    raw <span class="op">=</span> pd.read_csv(SNAPSHOT, header<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>], index_col<span class="op">=</span><span class="dv">0</span>, parse_dates<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    raw <span class="op">=</span> yf.download(tickers, start<span class="op">=</span><span class="st">"2020-01-01"</span>, end<span class="op">=</span><span class="st">"2025-01-01"</span>,</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>                      interval<span class="op">=</span><span class="st">"1d"</span>, group_by<span class="op">=</span><span class="st">"ticker"</span>, auto_adjust<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>frames <span class="op">=</span> []  <span class="co"># store each ticker's cleaned frame</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> t <span class="kw">in</span> tickers:</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Extract this ticker's columns</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    df_t <span class="op">=</span> raw[t].copy()</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Keep Kaggle columns and reset index</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>    df_t <span class="op">=</span> df_t[[<span class="st">"Open"</span>, <span class="st">"High"</span>, <span class="st">"Low"</span>, <span class="st">"Close"</span>, <span class="st">"Volume"</span>]].reset_index()</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Rename to Kaggle-style names</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    df_t <span class="op">=</span> df_t.rename(</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>        columns<span class="op">=</span>{</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Date"</span>: <span class="st">"date"</span>,</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Open"</span>: <span class="st">"open"</span>,</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>            <span class="st">"High"</span>: <span class="st">"high"</span>,</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Low"</span>: <span class="st">"low"</span>,</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Close"</span>: <span class="st">"close"</span>,</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Volume"</span>: <span class="st">"volume"</span>,</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add ticker name</span></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>    df_t[<span class="st">"Name"</span>] <span class="op">=</span> t</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>    frames.append(df_t)</span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine all tickers into one DataFrame</span></span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>df_all <span class="op">=</span> pd.concat(frames, ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert date column to datetime and set as index (matches Kaggle behavior)</span></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>df_all[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(df_all[<span class="st">"date"</span>])</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df_all.set_index(<span class="st">"date"</span>).sort_index()</span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>aapl <span class="op">=</span> df[df[<span class="st">"Name"</span>] <span class="op">==</span> <span class="st">"AAPL"</span>][[<span class="st">"close"</span>, <span class="st">"volume"</span>]].copy()</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>aapl[<span class="st">"daily_return"</span>] <span class="op">=</span> aapl[<span class="st">"close"</span>].pct_change(fill_method<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="univariate-analysis-profiling-a-single-variable-central-tendency" class="level3">
+<h3 class="anchored" data-anchor-id="univariate-analysis-profiling-a-single-variable-central-tendency">Univariate Analysis: Profiling a Single Variable / Central tendency</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mini-case — Trading Volume (instead of revenue)</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>mean_volume <span class="op">=</span> aapl[<span class="st">"volume"</span>].mean()</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>median_volume <span class="op">=</span> aapl[<span class="st">"volume"</span>].median()  <span class="co"># Often more representative</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mean Volume:    </span><span class="sc">{</span>mean_volume<span class="sc">:,.0f}</span><span class="ss">"</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Median Volume:  </span><span class="sc">{</span>median_volume<span class="sc">:,.0f}</span><span class="ss"> (More typical day)</span><span class="ch">\n</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre class="text"><code>Mean Volume:    90,571,035
+Median Volume:  76,283,350 (More typical day)</code></pre>
+</section>
+<section id="univariate-analysis-profiling-a-single-variable-dispersion" class="level3">
+<h3 class="anchored" data-anchor-id="univariate-analysis-profiling-a-single-variable-dispersion">Univariate Analysis: Profiling a Single Variable / Dispersion</h3>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mini-case — Realized Volatility (using daily returns)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> aapl[<span class="st">"daily_return"</span>].std()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>q3 <span class="op">=</span> aapl[<span class="st">"daily_return"</span>].quantile(<span class="fl">0.75</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>q1 <span class="op">=</span> aapl[<span class="st">"daily_return"</span>].quantile(<span class="fl">0.25</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>iqr <span class="op">=</span> q3 <span class="op">-</span> q1</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Standard Deviation of Returns: </span><span class="sc">{</span>std_dev<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Interquartile Range (IQR):    </span><span class="sc">{</span>iqr<span class="sc">:.4f}</span><span class="ss"> (Robust measure of spread)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre class="text"><code>Standard Deviation of Returns: 0.0200
+Interquartile Range (IQR):    0.0204 (Robust measure of spread)</code></pre>
+</section>
+<section id="univariate-analysis-profiling-a-single-variable-shape-skew-and-tails" class="level3">
+<h3 class="anchored" data-anchor-id="univariate-analysis-profiling-a-single-variable-shape-skew-and-tails">Univariate Analysis: Profiling a Single Variable / Shape: skew and tails</h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check for asymmetry and fat tails in daily returns</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>skewness <span class="op">=</span> aapl[<span class="st">"daily_return"</span>].skew()</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>kurtosis <span class="op">=</span> aapl[<span class="st">"daily_return"</span>].kurtosis()</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Skewness: </span><span class="sc">{</span>skewness<span class="sc">:.4f}</span><span class="ss">"</span>)</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Kurtosis: </span><span class="sc">{</span>kurtosis<span class="sc">:.4f}</span><span class="ss"> (&gt; 0 indicates fatter tails than a normal distribution)</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize the distribution</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>sns.histplot(aapl[<span class="st">"daily_return"</span>].dropna(), kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">100</span>, color<span class="op">=</span><span class="st">"0.5"</span>)</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of AAPL Daily Returns"</span>)</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Daily Return"</span>)</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a><span class="co"># save the figure</span></span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"aapl_daily_returns_distribution.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre class="text"><code>Skewness: 0.1056
+Kurtosis: 5.2778 (&gt; 0 indicates fatter tails than a normal distribution)</code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch02-aapl_daily_returns_distribution.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Historical illustrative distribution of AAPL daily returns with a KDE overlay; regenerate from the selected adjusted-price snapshot.</figcaption>
+</figure>
+</div>
+</section>
+<section id="bi-variate-analysis-uncovering-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="bi-variate-analysis-uncovering-relationships">Bi-variate Analysis: Uncovering Relationships</h3>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pivot the data to get tickers as columns</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>price_df <span class="op">=</span> df.pivot(columns<span class="op">=</span><span class="st">"Name"</span>, values<span class="op">=</span><span class="st">"close"</span>)[[<span class="st">"AAPL"</span>, <span class="st">"MSFT"</span>]]</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Mini-case: Shared drift</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. High correlation in prices due to a common trend</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>price_corr <span class="op">=</span> price_df.corr(method<span class="op">=</span><span class="st">"pearson"</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"--- Correlation of Prices ---"</span>)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(price_corr)</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Compare return correlation; it need not vanish</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>return_corr <span class="op">=</span> price_df.pct_change(fill_method<span class="op">=</span><span class="va">None</span>).corr(method<span class="op">=</span><span class="st">"pearson"</span>)</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">--- Correlation of Returns ---"</span>)</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(return_corr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre class="text"><code>--- Correlation of Prices ---
+Name      AAPL      MSFT
+Name                    
+AAPL  1.000000  0.930175
+MSFT  0.930175  1.000000
+
+--- Correlation of Returns ---
+Name      AAPL      MSFT
+Name                    
+AAPL  1.000000  0.748328
+MSFT  0.748328  1.000000</code></pre>
+</section>
+<section id="bi-variate-analysis-uncovering-relationships-seeing-the-relationship" class="level3">
+<h3 class="anchored" data-anchor-id="bi-variate-analysis-uncovering-relationships-seeing-the-relationship">Bi-variate Analysis: Uncovering Relationships / Seeing the relationship</h3>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">6</span>))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot for two continuous variables (return vs. volume)</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(data<span class="op">=</span>aapl, x<span class="op">=</span><span class="st">"daily_return"</span>, y<span class="op">=</span><span class="st">"volume"</span>, ax<span class="op">=</span>axes[<span class="dv">0</span>],</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>                color<span class="op">=</span><span class="st">"black"</span>, alpha<span class="op">=</span><span class="fl">0.35</span>, s<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"AAPL Daily Return vs. Volume"</span>)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Volume (log scale)"</span>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_yscale(<span class="st">"log"</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Box plot for a categorical and a continuous variable</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll create a 'year' category for this example</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>aapl_returns_by_year <span class="op">=</span> aapl.copy()</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>aapl_returns_by_year[<span class="st">"year"</span>] <span class="op">=</span> aapl_returns_by_year.index.year</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data<span class="op">=</span>aapl_returns_by_year, x<span class="op">=</span><span class="st">"year"</span>, y<span class="op">=</span><span class="st">"daily_return"</span>, ax<span class="op">=</span>axes[<span class="dv">1</span>],</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>            color<span class="op">=</span><span class="st">"0.88"</span>, linecolor<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Distribution of AAPL Returns by Year"</span>)</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a><span class="co"># save the figure</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>plt.savefig(</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"aapl_return_vs_volume_and_yearly_boxplot.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Heatmap for an overview of many variables</span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>return_matrix <span class="op">=</span> df.pivot(columns<span class="op">=</span><span class="st">"Name"</span>, values<span class="op">=</span><span class="st">"close"</span>)[tickers].pct_change(fill_method<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> return_matrix.corr()</span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>sns.heatmap(correlation_matrix, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">"Greys"</span>, fmt<span class="op">=</span><span class="st">".2f"</span>)</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Correlation Matrix of Daily Returns"</span>)</span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="co"># save the figure</span></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"correlation_matrix_heatmap.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch02-aapl_return_vs_volume_and_yearly_boxplot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Bivariate analysis of Apple’s daily returns. The scatter plot (left) shows that periods of high trading volume often coincide with extreme daily returns, both positive and negative. The box plot (right) visualizes the yearly distribution of these returns, illustrating how return volatility has evolved over the period.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch02-correlation_matrix_heatmap.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Heatmap of the Pearson correlation matrix for the daily returns of selected technology stocks. Darker shading indicates a stronger positive correlation. The annotations match the correlations printed above, between 0.65 and 0.75. Returns this strongly co-moving leave little room for diversification within a single sector, which is the point worth taking from the panel.</figcaption>
+</figure>
+</div>
+</section>
+<section id="time-series-exploration-market-dynamics-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-exploration-market-dynamics-over-time">Time-Series Exploration: Market Dynamics Over Time</h3>
+<p>This example appears here in full; the printed chapter does not include it.</p>
+<p>A stock’s price is not an independent draw each day; it is anchored to yesterday’s close, which creates dependencies that simple statistical methods may overlook. Time also carries its own patterns. Calendar effects manifest in consistent ways: month-end portfolio rebalancing tends to drive trading volume higher, earnings announcements bring clusters of volatility, and daily returns often follow systematic quirks, such as the well-documented “Monday effect” <span class="citation" data-cites="Shleifer2000">(<a href="#ref-Shleifer2000" role="doc-biblioref">Shleifer 2000</a>)</span>. Market memory manifests as momentum, where price trends persist, or mean reversion, where they correct. Structural breaks from crises, regulatory changes, or market evolution can instantly invalidate years of historical relationships, making pre-2008 risk models useless for post-crisis markets. Time series analysis isn’t an optional nuance; it’s fundamental to avoiding models that work perfectly on shuffled data but fail catastrophically in live trading.</p>
+<section id="components-you-can-often-isolate" class="level4">
+<h4 class="anchored" data-anchor-id="components-you-can-often-isolate">Components you can often isolate</h4>
+<dl>
+<dt>Trend:</dt>
+<dd>
+<p>long-run direction.</p>
+</dd>
+<dt>Seasonality:</dt>
+<dd>
+<p>repeating cycles: quarterly revenue, month-end flows, event calendars.</p>
+</dd>
+<dt>Residuals:</dt>
+<dd>
+<p>what’s left after you remove trend and seasonality.</p>
+</dd>
+</dl>
+<p>Daily returns seldom show seasonal patterns; volumes and fundamentals often do.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.seasonal <span class="im">import</span> seasonal_decompose</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Decompose daily trading volume</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co"># A retrospective 21-session pattern, not a true calendar-month decomposition.</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll use a subset of the data for a clearer plot</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>aapl.index <span class="op">=</span> pd.to_datetime(aapl.index)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>volume_subset <span class="op">=</span> aapl[<span class="st">"volume"</span>][<span class="st">"2024-01-01"</span>:<span class="st">"2024-12-31"</span>].dropna()</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(volume_subset) <span class="op">&lt;</span> <span class="dv">42</span>:</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"At least two 21-session cycles are required."</span>)</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> seasonal_decompose(volume_subset, model<span class="op">=</span><span class="st">"additive"</span>, period<span class="op">=</span><span class="dv">21</span>)</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Decomposing Trading Volume into Trend, Seasonality, and Residuals"</span>)</span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> result.plot()</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>fig.set_size_inches(<span class="dv">15</span>, <span class="dv">8</span>)</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a><span class="co"># save the figure</span></span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"aapl_volume_decomposition.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch02-aapl_volume_decomposition.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Historical illustration of 2024 AAPL volume decomposition with a 21-session period; this is retrospective and is not a calendar-month seasonal estimate.</figcaption>
+</figure>
+</div>
+</section>
+<section id="memory-and-regimes" class="level4">
+<h4 class="anchored" data-anchor-id="memory-and-regimes">Memory and regimes</h4>
+<p>Autocorrelation (ACF) shows how today relates to earlier lags; partial autocorrelation (PACF) teases out direct links from indirect ones. Returns often exhibit near-zero autocorrelation, while squared returns retain memory, a characteristic of classic volatility clustering. Keep an eye out for breaks (policy shifts, crises) that change the rules mid-sample <span class="citation" data-cites="49018680cf534023b6ae0f4e933c475d">(<a href="#ref-49018680cf534023b6ae0f4e933c475d" role="doc-biblioref">Hyndman and Athanasopoulos 2021</a>)</span>.</p>
+<dl>
+<dt>Short-horizon behavior:</dt>
+<dd>
+<p>Slight positive ACF at very short lags hints at momentum; a flip to negative at the following few lags points to mean reversion.</p>
+</dd>
+<dt>Volatility clustering:</dt>
+<dd>
+<p>The ACF of squared returns decays slowly, indicating that high-volatility periods persist.</p>
+</dd>
+</dl>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_acf, plot_pacf</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare squared returns to check for volatility clustering</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>aapl[<span class="st">"sq_returns"</span>] <span class="op">=</span> aapl[<span class="st">"daily_return"</span>] <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">16</span>, <span class="dv">5</span>))</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="co"># ACF of returns often shows little to no memory</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>plot_acf(</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    aapl[<span class="st">"daily_return"</span>].dropna(), lags<span class="op">=</span><span class="dv">20</span>, ax<span class="op">=</span>axes[<span class="dv">0</span>], title<span class="op">=</span><span class="st">"ACF of Daily Returns"</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a><span class="co"># ACF of squared returns shows memory (volatility clustering)</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>plot_acf(</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    aapl[<span class="st">"sq_returns"</span>].dropna(),</span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    lags<span class="op">=</span><span class="dv">20</span>,</span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    ax<span class="op">=</span>axes[<span class="dv">1</span>],</span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"ACF of Squared Returns (Volatility)"</span>,</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a><span class="co"># save the figure</span></span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"aapl_acf_returns_and_squared_returns.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/ch02-aapl_acf_returns_and_squared_returns.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Autocorrelation Function (ACF) plots for Apple’s daily returns (left) and squared daily returns (right) over 20 lags.</figcaption>
+</figure>
+</div>
+</section>
+<section id="calendars-and-alignment" class="level4">
+<h4 class="anchored" data-anchor-id="calendars-and-alignment">Calendars and alignment</h4>
+<p>Work on the right clock: business days for trading processes and venue calendars for global events. Align events with as-of joins to avoid peeking into the future. Handle time zones consistently: store in UTC, retain native zones for features like “after close.”</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original data with weekend gaps:"</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(aapl[<span class="st">"close"</span>].loc[<span class="st">"2024-01-01"</span>:<span class="st">"2024-01-10"</span>])</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Weekdays are not an exchange calendar. These filled prices are stale marks;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># use actual trading sessions for returns and backtests.</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>business_day_prices <span class="op">=</span> aapl[<span class="st">"close"</span>].resample(<span class="st">"B"</span>).last()</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Forward-fill any gaps created by holidays (e.g., Jan 1, 2024 was a holiday)</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>business_day_prices_filled <span class="op">=</span> business_day_prices.ffill()</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Resampled and forward-filled data:"</span>)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(business_day_prices_filled.loc[<span class="st">"2024-01-01"</span>:<span class="st">"2024-01-10"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Output:</p>
+<pre class="text"><code>Original data with weekend gaps:
+date
+2024-01-02    183.404007
+2024-01-03    182.030746
+2024-01-04    179.718933
+2024-01-05    178.997711
+2024-01-08    183.324966
+2024-01-09    182.910049
+2024-01-10    183.947372
+Name: close, dtype: float64
+
+Resampled and forward-filled data:
+date
+2024-01-01    190.211014
+2024-01-02    183.404007
+2024-01-03    182.030746
+2024-01-04    179.718933
+2024-01-05    178.997711
+2024-01-08    183.324966
+2024-01-09    182.910049
+2024-01-10    183.947372
+Freq: B, Name: close, dtype: float64</code></pre>
+<p><strong>Guardrails:</strong> Check stationarity before modeling levels; prices are usually non-stationary, while returns are less so. Use rolling windows to ensure future data does not influence past estimates.</p>
+</section>
+</section>
+</section>
+<section id="feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering">Feature Engineering</h2>
+<section id="numerical-data-continuous-data" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-data-continuous-data">Numerical Data / Continuous Data</h3>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume df has columns 'trading_volume' and 'pe_ratio'</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>scaled_features <span class="op">=</span> scaler.fit_transform(df[[<span class="st">'trading_volume'</span>, <span class="st">'pe_ratio'</span>]])</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The output is a NumPy array, which can be converted back to a DataFrame</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>df_scaled <span class="op">=</span> pd.DataFrame(scaled_features, columns<span class="op">=</span>[<span class="st">'volume_scaled'</span>, <span class="st">'pe_scaled'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply a log transform to reduce the skew of market_cap</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'market_cap_log'</span>] <span class="op">=</span> np.log1p(df[<span class="st">'market_cap'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create 4 bins of equal width for the debt-to-income ratio</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'dti_binned'</span>] <span class="op">=</span> pd.cut(df[<span class="st">'dti_ratio'</span>], bins<span class="op">=</span><span class="dv">4</span>, </span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>                          labels<span class="op">=</span>[<span class="st">'Low'</span>, <span class="st">'Medium'</span>, <span class="st">'High'</span>, <span class="st">'Very High'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>poly <span class="op">=</span> PolynomialFeatures(degree<span class="op">=</span><span class="dv">2</span>, include_bias<span class="op">=</span><span class="va">False</span>, interaction_only<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create interaction and polynomial features from interest_rate and inflation</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>inter_features <span class="op">=</span> poly.fit_transform(df[[<span class="st">'interest_rate'</span>, <span class="st">'inflation'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="numerical-data-discrete-data" class="level3">
+<h3 class="anchored" data-anchor-id="numerical-data-discrete-data">Numerical Data / Discrete Data</h3>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Group loan terms into broader categories</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">120</span>, <span class="dv">240</span>, <span class="dv">361</span>] <span class="co"># Corresponds to &lt;=10yr, 10-20yr, &gt;20yr</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'Short-Term'</span>, <span class="st">'Mid-Term'</span>, <span class="st">'Long-Term'</span>]</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'loan_term_group'</span>] <span class="op">=</span> pd.cut(df[<span class="st">'loan_term_months'</span>], bins<span class="op">=</span>bins, labels<span class="op">=</span>labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert a count of late payments into a binary flag</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'had_late_payments'</span>] <span class="op">=</span> (df[<span class="st">'num_late_payments'</span>] <span class="op">&gt;</span> <span class="dv">0</span>).astype(<span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="categorical-data-nominal-data" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-data-nominal-data">Categorical Data / Nominal Data</h3>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create binary columns for each unique value in 'sector'</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># e.g., 'sector_Technology', 'sector_Healthcare', etc.</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>one_hot_df <span class="op">=</span> pd.get_dummies(df[<span class="st">'sector'</span>], prefix<span class="op">=</span><span class="st">'sector'</span>)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the new one-hot columns back to the original DataFrame</span></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.join(one_hot_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="categorical-data-ordinal-data" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-data-ordinal-data">Categorical Data / Ordinal Data</h3>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the explicit order of the categories</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>rating_map <span class="op">=</span> {<span class="st">'Low'</span>: <span class="dv">1</span>, <span class="st">'Medium'</span>: <span class="dv">2</span>, <span class="st">'High'</span>: <span class="dv">3</span>, <span class="st">'Very High'</span>: <span class="dv">4</span>}</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Map the defined ordering to the feature</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'risk_rating_ordinal'</span>] <span class="op">=</span> df[<span class="st">'risk_rating'</span>].<span class="bu">map</span>(rating_map)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross-fit training encodings: each row must exclude its own label.</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This shuffled example assumes IID rows; temporal data needs past-only folds.</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> KFold</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>encoded <span class="op">=</span> pd.Series(index<span class="op">=</span>df.index, dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fit_idx, heldout_idx <span class="kw">in</span> KFold(<span class="dv">3</span>, shuffle<span class="op">=</span><span class="va">True</span>, random_state<span class="op">=</span><span class="dv">42</span>).split(df):</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>    fold_train <span class="op">=</span> df.iloc[fit_idx]</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    target_map <span class="op">=</span> fold_train.groupby(<span class="st">'risk_rating'</span>)[<span class="st">'default_rate'</span>].mean()</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    encoded.iloc[heldout_idx] <span class="op">=</span> (</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>        df.iloc[heldout_idx][<span class="st">'risk_rating'</span>].<span class="bu">map</span>(target_map)</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>        .fillna(fold_train[<span class="st">'default_rate'</span>].mean()).to_numpy()</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'risk_rating_encoded'</span>] <span class="op">=</span> encoded</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="co"># External test rows use a mapping learned from the full training set only.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="date-and-time" class="level3">
+<h3 class="anchored" data-anchor-id="date-and-time">Date and Time</h3>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure the index is a datetime object</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>df.index <span class="op">=</span> pd.to_datetime(df.index)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract time-based and cyclical features</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'day_of_week'</span>] <span class="op">=</span> df.index.dayofweek  <span class="co"># Monday=0, Sunday=6</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'month'</span>] <span class="op">=</span> df.index.month</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'quarter'</span>] <span class="op">=</span> df.index.quarter</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'is_month_end'</span>] <span class="op">=</span> df.index.is_month_end</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="co"># df['is_trading_holiday'] = df.index.map(is_holiday_func) # Conceptual</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure date columns are in datetime format</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'origination_date'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'origination_date'</span>])</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'last_payment_date'</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">'last_payment_date'</span>])</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Elapsed time is NOT delinquency; days past due needs an unpaid due date.</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate loan age and days since last payment</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'loan_age_days'</span>] <span class="op">=</span> (pd.to_datetime(<span class="st">'2025-09-25'</span>) <span class="op">-</span> df[<span class="st">'origination_date'</span>]).dt.days</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'days_since_last_payment'</span>] <span class="op">=</span> (pd.to_datetime(<span class="st">'2025-09-25'</span>) <span class="op">-</span> df[<span class="st">'last_payment_date'</span>]).dt.days</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Localize timestamp to its original time zone (e.g., US/Eastern)</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'trade_time_local'</span>] <span class="op">=</span> df[<span class="st">'trade_time'</span>].dt.tz_localize(<span class="st">'US/Eastern'</span>, ambiguous<span class="op">=</span><span class="st">'infer'</span>)</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to UTC for standardized analysis</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'trade_time_utc'</span>] <span class="op">=</span> df[<span class="st">'trade_time_local'</span>].dt.tz_convert(<span class="st">'UTC'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="time-series-data" class="level3">
+<h3 class="anchored" data-anchor-id="time-series-data">Time-Series Data</h3>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume 'price' is a column in a DataFrame with a DatetimeIndex</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Lag Features: Use past values to predict the present</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'price_lag_1'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].shift(<span class="dv">1</span>)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'price_lag_5'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].shift(<span class="dv">5</span>)</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Rolling Window Features: Capture recent trend and volatility</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'rolling_mean_7_sessions'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].shift(<span class="dv">1</span>).rolling(window<span class="op">=</span><span class="dv">7</span>).mean()</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'rolling_std_7_sessions'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].shift(<span class="dv">1</span>).rolling(window<span class="op">=</span><span class="dv">7</span>).std()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the first-order difference (period-over-period change)</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This is a currency price change, not a proportional return</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'price_diff_1'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].diff(<span class="dv">1</span>)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also calculate the percentage change</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'price_returns'</span>] <span class="op">=</span> df[<span class="st">'price'</span>].pct_change(<span class="dv">1</span>, fill_method<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure the index is a datetime object</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>df.index <span class="op">=</span> pd.to_datetime(df.index)</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract calendar-based features to model seasonality</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'day_of_week'</span>] <span class="op">=</span> df.index.dayofweek  <span class="co"># Monday=0, Sunday=6</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'month'</span>] <span class="op">=</span> df.index.month</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'quarter'</span>] <span class="op">=</span> df.index.quarter</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'is_quarter_end'</span>] <span class="op">=</span> df.index.is_quarter_end</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="textual-data" class="level3">
+<h3 class="anchored" data-anchor-id="textual-data">Textual Data</h3>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> TfidfVectorizer</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume df['earnings_call_transcript'] contains the text for each company</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>corpus <span class="op">=</span> df[<span class="st">'earnings_call_transcript'</span>].fillna(<span class="st">''</span>) <span class="co"># Handle potential missing text</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>vectorizer <span class="op">=</span> TfidfVectorizer(max_features<span class="op">=</span><span class="dv">500</span>, stop_words<span class="op">=</span><span class="st">'english'</span>)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The result is a sparse matrix of TF-IDF features</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>tfidf_features <span class="op">=</span> vectorizer.fit_transform(corpus)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Conceptual example using a pre-trained transformer model</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sentence_transformers <span class="im">import</span> SentenceTransformer</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="co"># General-purpose sentence embeddings; FinBERT is a sentiment classifier.</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> SentenceTransformer(<span class="st">'sentence-transformers/all-MiniLM-L6-v2'</span>)</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Long transcripts require chunking; the model truncates long inputs.</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a dense vector (embedding) that captures the text's meaning</span></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="co"># This can be used as a feature in a downstream model</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'transcript_embedding'</span>] <span class="op">=</span> df[<span class="st">'earnings_call_transcript'</span>].fillna(<span class="st">''</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: model.encode(x))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Conceptual example of extracting sentiment and entity features</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A dependency-free polarity score: count positive against negative terms.</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>positive_terms <span class="op">=</span> {<span class="st">'strong'</span>, <span class="st">'lower'</span>, <span class="st">'improved'</span>, <span class="st">'growth'</span>}</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>negative_terms <span class="op">=</span> {<span class="st">'weak'</span>, <span class="st">'rising'</span>, <span class="st">'losses'</span>, <span class="st">'defaults'</span>}</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> simple_sentiment(text):</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>    words <span class="op">=</span> <span class="bu">set</span>(text.lower().split())</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">len</span>(words <span class="op">&amp;</span> positive_terms) <span class="op">-</span> <span class="bu">len</span>(words <span class="op">&amp;</span> negative_terms)</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'sentiment_polarity'</span>] <span class="op">=</span> df[<span class="st">'news_headline'</span>].<span class="bu">apply</span>(simple_sentiment)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Count mentions of a specific, relevant entity</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'mentions_of_fed'</span>] <span class="op">=</span> df[<span class="st">'central_bank_minutes'</span>].<span class="bu">str</span>.count(<span class="st">'Federal Reserve'</span>)</span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a><span class="co"># This ignores negation and context ("lower losses" scores as negative). It is</span></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="co"># a feature-extraction toy, not a validated financial sentiment model.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="boolean-data" class="level3">
+<h3 class="anchored" data-anchor-id="boolean-data">Boolean Data</h3>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a boolean flag based on a single threshold</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This captures the business rule for a high debt-to-income ratio.</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'is_high_dti'</span>] <span class="op">=</span> df[<span class="st">'dti_ratio'</span>] <span class="op">&gt;</span> <span class="fl">0.4</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an interaction flag from multiple conditions to identify a specific cohort</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'is_risky_new_customer'</span>] <span class="op">=</span> (df[<span class="st">'customer_tenure_days'</span>] <span class="op">&lt;</span> <span class="dv">90</span>) <span class="op">&amp;</span> <span class="op">\</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>                              (df[<span class="st">'transaction_amount'</span>] <span class="op">&gt;</span> <span class="dv">5000</span>)</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert boolean to integer (0 or 1) for model input</span></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'is_high_dti'</span>] <span class="op">=</span> df[<span class="st">'is_high_dti'</span>].astype(<span class="bu">int</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume 'default' is the boolean target column (1 for default, 0 for no default)</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the class distribution</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>class_counts <span class="op">=</span> df[<span class="st">'default'</span>].value_counts()</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>class_percentages <span class="op">=</span> df[<span class="st">'default'</span>].value_counts(normalize<span class="op">=</span><span class="va">True</span>) <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Class Distribution:"</span>)</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(class_counts)</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Class Percentages:"</span>)</span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"No Default (0): </span><span class="sc">{</span>class_percentages[<span class="dv">0</span>]<span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Default (1):    </span><span class="sc">{</span>class_percentages[<span class="dv">1</span>]<span class="sc">:.2f}</span><span class="ss">%"</span>)</span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Output might look like:</span></span>
+<span id="cb52-13"><a href="#cb52-13" aria-hidden="true" tabindex="-1"></a><span class="co"># No Default (0): 98.50%</span></span>
+<span id="cb52-14"><a href="#cb52-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Default (1):    1.50%</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="document-data" class="level3">
+<h3 class="anchored" data-anchor-id="document-data">Document Data</h3>
+<p>Output:</p>
+<pre class="text"><code># Conceptual example using a hypothetical OCR library
+import re
+
+# 1. Extract raw text from a document image
+raw_text = ocr_library.process_image('invoice.png')
+
+# 2. Create a simple binary feature: check if the word "Overdue" is present
+df['is_overdue'] = 1 if re.search('overdue', raw_text, re.IGNORECASE) else 0</code></pre>
+<p>Output:</p>
+<pre class="text"><code># Conceptual example using a hypothetical IDP model
+# The model returns a dictionary of extracted, structured fields
+extracted_data = idp_model.extract_fields('loan_application.pdf')
+
+# Create features from the structured output
+df['document_type'] = extracted_data.get('doc_type') # e.g., 'LoanApplication'
+df['applicant_income'] = extracted_data.get('Annual Income')
+df['loan_amount_requested'] = extracted_data.get('Loan Amount')</code></pre>
+</section>
+</section>
+</section>
+<section id="ai-tutorial-preprocessing-loan-application-data-for-approval-prediction" class="level1">
+<h1>AI Tutorial: Preprocessing Loan Application Data for Approval Prediction</h1>
+<p>In this use case, we demonstrate how raw loan application data can be systematically preprocessed to build reliable credit risk models. We move through the complete preprocessing pipeline, from initial data quality assessment through feature engineering, applying the cleaning, exploration, and feature-construction techniques introduced earlier in this chapter to a single end-to-end example. The tutorial can be run in a Jupyter notebook with standard scientific Python (<code>pandas</code>, <code>numpy</code>, <code>matplotlib</code>, <code>seaborn</code>) plus <code>scikit-learn</code>.</p>
+<p><strong>The data is synthetic.</strong> The file <code>data/loan_data.csv</code> is not a real lending portfolio; it is generated programmatically with a fixed seed (<code>np.random.default_rng(42)</code>, 400 rows) so the example is fully reproducible and free of any real applicant’s personal information. The column schema deliberately mirrors the widely used public “Loan Prediction” template (<code>Gender</code>, <code>Married</code>, <code>ApplicantIncome</code>, <code>Credit_History</code>, <code>Loan_Status</code>, and so on), but every value is fabricated. Two artifacts of this fabrication are visible in the data and worth naming so they are not mistaken for real-world signal. First, missing values are not organic: they are injected by sampling <code>None</code> with a fixed probability (roughly 5% per affected column), which is why the missingness counts below are small and roughly uniform rather than concentrated by economic cause as discussed in Section&nbsp;“Handling Missing Data”. Second, and most important, the target <code>Loan_Status</code> is not drawn independently; it is manufactured from a hidden scoring rule.</p>
+<p>The planted label rule explains why the exploratory analysis finds associations with approval. Approval is assigned by computing a latent score, <code>score = (ApplicantIncome + CoapplicantIncome)/10000 + Credit_History</code> (with missing <code>Credit_History</code> treated as 0.5), and then setting <code>Loan_Status</code> to <code>Y</code> when that score exceeds its own median and <code>N</code> otherwise. Both income and credit history enter this rule. Their relative association with approval depends on the generated sample and must be assessed from the training-data EDA; the coefficient sizes alone do not establish which predictor dominates. These are deliberately planted relationships, not evidence about actual lending decisions.</p>
+<p>Understanding proper data preprocessing is crucial for credit risk modeling. Raw loan applications contain incomplete information, inconsistent formats, and unstructured features that traditional rule-based systems may handle through manual review. By applying systematic preprocessing methods, we can transform messy application data into clean, structured features that machine learning models require while preserving the economic relationships that determine creditworthiness. In a production credit-risk setting this synthetic file would be replaced by a governed feed of real applications joined to bureau data, and the cleaning, encoding, and scaling steps shown here would run inside a versioned, auditable pipeline rather than a single notebook.</p>
+<p>The primary goal is to prepare <strong>loan application data</strong> for approval prediction through comprehensive data cleaning, exploratory analysis, and feature engineering that captures applicant repayment capacity.</p>
+<p>The dataset includes the following features:</p>
+<ul>
+<li><p><strong>Gender</strong>: Applicant gender (Male or Female)</p></li>
+<li><p><strong>Married</strong>: Marital status (Yes or No)</p></li>
+<li><p><strong>Dependents</strong>: Number of persons depending on the applicant</p></li>
+<li><p><strong>Education</strong>: Applicant education level (Graduate or Not Graduate)</p></li>
+<li><p><strong>Self_Employed</strong>: Self-employment status (Yes or No)</p></li>
+<li><p><strong>ApplicantIncome</strong>: Monthly income of the primary applicant</p></li>
+<li><p><strong>CoapplicantIncome</strong>: Monthly income of the co-applicant</p></li>
+<li><p><strong>LoanAmount</strong>: Requested loan amount (in thousands)</p></li>
+<li><p><strong>Loan_Amount_Term</strong>: Loan repayment term (in months)</p></li>
+<li><p><strong>Credit_History</strong>: Whether credit history meets guidelines (binary indicator)</p></li>
+<li><p><strong>Property_Area</strong>: Residential area type (Urban, Semiurban, or Rural)</p></li>
+<li><p><strong>Loan_Status</strong>: Target variable indicating loan approval (Y = approved, N = denied)</p></li>
+</ul>
+<p>The preprocessing workflow is organized into three thematic stages:</p>
+<ol type="1">
+<li><p><strong>Data Cleaning:</strong> Identifying missing value patterns, applying domain-informed imputation strategies, and validating data quality</p></li>
+<li><p><strong>Exploratory Data Analysis:</strong> Understanding approval rates, comparing financial characteristics between approved and denied applications, and identifying predictive features</p></li>
+<li><p><strong>Feature Engineering:</strong> Creating financial capacity ratios, encoding categorical variables, and scaling features for model compatibility</p></li>
+</ol>
+<p>This structured approach ensures that data quality issues are resolved before analysis, insights from exploration inform feature creation decisions, and the final dataset accurately represents applicant creditworthiness signals.</p>
+<p><strong>Data Overview.</strong> The bundled data and the notebook fallback are synthetic teaching fixtures; row counts, missingness, and approval rates must be read from the actual file. Reserve the holdout before inspecting outcome relationships. With application dates, use a chronological split that keeps each date in one partition; without dates, use a labelled IID split that does not claim to test future performance. Approval labels represent the planted decision rule, not realized defaults or verified affordability.</p>
+<p>Imputation values are learned from the training partition and applied unchanged to the holdout. Categorical features and the binary credit-history flag use the training mode; continuous fields use the training median. These simple fills illustrate preprocessing, not a recommendation to erase economically informative missingness in actual applications. The subsequent target comparisons and feature selection use training rows only.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder, StandardScaler</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> ColumnTransformer</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a><span class="co"># The bundled file is synthetic. Incomes are monthly currency units;</span></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a><span class="co"># LoanAmount is thousands of the same currency; term is in months.</span></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>loan_data <span class="op">=</span> pd.read_csv(<span class="st">"data/loan_data.csv"</span>)</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Split before inspecting target relationships or learning any preprocessing.</span></span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> loan_data[<span class="st">'Loan_Status'</span>].isna().<span class="bu">any</span>() <span class="kw">or</span> <span class="kw">not</span> loan_data[<span class="st">'Loan_Status'</span>].isin([<span class="st">'Y'</span>, <span class="st">'N'</span>]).<span class="bu">all</span>():</span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Loan_Status must contain only observed Y/N labels."</span>)</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="st">'ApplicationDate'</span> <span class="kw">in</span> loan_data.columns:</span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>    loan_data[<span class="st">'ApplicationDate'</span>] <span class="op">=</span> pd.to_datetime(loan_data[<span class="st">'ApplicationDate'</span>], errors<span class="op">=</span><span class="st">'raise'</span>)</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> loan_data[<span class="st">'ApplicationDate'</span>].isna().<span class="bu">any</span>():</span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"ApplicationDate cannot be missing for a temporal split."</span>)</span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>    loan_data <span class="op">=</span> loan_data.sort_values(<span class="st">'ApplicationDate'</span>)</span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>    cutoff <span class="op">=</span> loan_data[<span class="st">'ApplicationDate'</span>].iloc[<span class="bu">int</span>(<span class="fl">0.7</span> <span class="op">*</span> <span class="bu">len</span>(loan_data))]</span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> loan_data.loc[loan_data[<span class="st">'ApplicationDate'</span>] <span class="op">&lt;</span> cutoff].copy()</span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>    loan_test <span class="op">=</span> loan_data.loc[loan_data[<span class="st">'ApplicationDate'</span>] <span class="op">&gt;=</span> cutoff].copy()</span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> df.empty <span class="kw">or</span> loan_test.empty:</span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Need distinct application dates for a temporal holdout."</span>)</span>
+<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Chronological split by ApplicationDate."</span>)</span>
+<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb55-27"><a href="#cb55-27" aria-hidden="true" tabindex="-1"></a>    df, loan_test <span class="op">=</span> train_test_split(loan_data, test_size<span class="op">=</span><span class="fl">0.3</span>,</span>
+<span id="cb55-28"><a href="#cb55-28" aria-hidden="true" tabindex="-1"></a>                                   stratify<span class="op">=</span>loan_data[<span class="st">'Loan_Status'</span>], random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb55-29"><a href="#cb55-29" aria-hidden="true" tabindex="-1"></a>    df, loan_test <span class="op">=</span> df.copy(), loan_test.copy()</span>
+<span id="cb55-30"><a href="#cb55-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No application dates: stratified IID holdout; this does not validate future performance."</span>)</span>
+<span id="cb55-31"><a href="#cb55-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Training rows: </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss">; untouched holdout rows: </span><span class="sc">{</span><span class="bu">len</span>(loan_test)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb55-32"><a href="#cb55-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Dataset: </span><span class="sc">{</span>df<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> applications, </span><span class="sc">{</span>df<span class="sc">.</span>shape[<span class="dv">1</span>]<span class="sc">}</span><span class="ss"> features"</span>)</span>
+<span id="cb55-33"><a href="#cb55-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-34"><a href="#cb55-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify missing values</span></span>
+<span id="cb55-35"><a href="#cb55-35" aria-hidden="true" tabindex="-1"></a>missing_counts <span class="op">=</span> df.isnull().<span class="bu">sum</span>()[df.isnull().<span class="bu">sum</span>() <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb55-36"><a href="#cb55-36" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Missing values:</span><span class="ch">\n</span><span class="sc">{</span>missing_counts<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb55-37"><a href="#cb55-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-38"><a href="#cb55-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit imputation values on training rows, then apply those same values to test.</span></span>
+<span id="cb55-39"><a href="#cb55-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Include numeric income fields; an absent income is not automatically zero.</span></span>
+<span id="cb55-40"><a href="#cb55-40" aria-hidden="true" tabindex="-1"></a>categorical_columns <span class="op">=</span> [<span class="st">'Gender'</span>, <span class="st">'Married'</span>, <span class="st">'Dependents'</span>, <span class="st">'Education'</span>, <span class="st">'Self_Employed'</span>, <span class="st">'Property_Area'</span>]</span>
+<span id="cb55-41"><a href="#cb55-41" aria-hidden="true" tabindex="-1"></a>numerical_columns <span class="op">=</span> [<span class="st">'ApplicantIncome'</span>, <span class="st">'CoapplicantIncome'</span>, <span class="st">'LoanAmount'</span>, <span class="st">'Loan_Amount_Term'</span>]</span>
+<span id="cb55-42"><a href="#cb55-42" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> categorical_columns <span class="op">+</span> [<span class="st">'Credit_History'</span>]:</span>
+<span id="cb55-43"><a href="#cb55-43" aria-hidden="true" tabindex="-1"></a>    observed <span class="op">=</span> df[col].mode()</span>
+<span id="cb55-44"><a href="#cb55-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> observed.empty:</span>
+<span id="cb55-45"><a href="#cb55-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"No observed training values for </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb55-46"><a href="#cb55-46" aria-hidden="true" tabindex="-1"></a>    fill_value <span class="op">=</span> observed.iloc[<span class="dv">0</span>]</span>
+<span id="cb55-47"><a href="#cb55-47" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].fillna(fill_value)</span>
+<span id="cb55-48"><a href="#cb55-48" aria-hidden="true" tabindex="-1"></a>    loan_test[col] <span class="op">=</span> loan_test[col].fillna(fill_value)</span>
+<span id="cb55-49"><a href="#cb55-49" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> numerical_columns:</span>
+<span id="cb55-50"><a href="#cb55-50" aria-hidden="true" tabindex="-1"></a>    fill_value <span class="op">=</span> df[col].median()</span>
+<span id="cb55-51"><a href="#cb55-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> pd.isna(fill_value):</span>
+<span id="cb55-52"><a href="#cb55-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"No observed training values for </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss">."</span>)</span>
+<span id="cb55-53"><a href="#cb55-53" aria-hidden="true" tabindex="-1"></a>    df[col] <span class="op">=</span> df[col].fillna(fill_value)</span>
+<span id="cb55-54"><a href="#cb55-54" aria-hidden="true" tabindex="-1"></a>    loan_test[col] <span class="op">=</span> loan_test[col].fillna(fill_value)</span>
+<span id="cb55-55"><a href="#cb55-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-56"><a href="#cb55-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">After cleaning: </span><span class="sc">{</span>df[categorical_columns <span class="op">+</span> numerical_columns <span class="op">+</span> [<span class="st">'Credit_History'</span>]]<span class="sc">.</span>isna()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">.</span><span class="bu">sum</span>()<span class="sc">}</span><span class="ss"> missing training feature values"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>The notebook prints the counts and statistics from the selected data and training split; no fixed output is asserted here.</em></p>
+<section id="exploratory-data-analysis-1" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis-1">Exploratory Data Analysis</h2>
+<p>Following data cleaning, we conduct exploratory analysis to understand the relationships between applicant characteristics and loan outcomes. This stage profiles the target variable distribution, compares financial metrics between approved and denied applications, and ranks which features show the strongest linear association with the approval decision. The work applies the univariate and bivariate techniques from Section&nbsp;“Exploratory Data Analysis” to the loan dataset, treating EDA as a briefing that decides what to engineer next rather than as additional cleaning.</p>
+<p>The code first prints the class counts and the approval rate, then derives <code>TotalIncome</code> as the sum of <code>ApplicantIncome</code> and <code>CoapplicantIncome</code> so that household earning capacity can be compared across approved and denied groups. It then binarizes <code>Loan_Status</code> (<code>Y</code> maps to 1) and computes the absolute Pearson correlation of each numerical feature with that target, sorting to surface the top predictors. Two figures are saved: a bar chart of the approval distribution and a box plot of <code>ApplicantIncome</code> by outcome.</p>
+<p>Read the printed correlations as descriptions of this training fixture. A strong credit-history association is expected from the planted label rule, but its exact magnitude depends on the sample. Small marginal correlations do not rule out nonlinear relationships or interactions. None of these associations establishes a real lending driver; inspect potential label leakage and protected-attribute proxies before modeling actual applications.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Examine target distribution</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Loan_Status distribution:"</span>)</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">"Loan_Status"</span>].value_counts())</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>approval_rate <span class="op">=</span> (df[<span class="st">"Loan_Status"</span>] <span class="op">==</span> <span class="st">"Y"</span>).mean() <span class="op">*</span> <span class="dv">100</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Approval rate: </span><span class="sc">{</span>approval_rate<span class="sc">:.1f}</span><span class="ss">%"</span>)</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate total household income</span></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"TotalIncome"</span>] <span class="op">=</span> df[<span class="st">"ApplicantIncome"</span>] <span class="op">+</span> df[<span class="st">"CoapplicantIncome"</span>]</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare income by loan status</span></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">ApplicantIncome by approval status:"</span>)</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>income_stats <span class="op">=</span> df.groupby(<span class="st">"Loan_Status"</span>)[<span class="st">"ApplicantIncome"</span>].agg([<span class="st">"mean"</span>, <span class="st">"median"</span>])</span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(income_stats)</span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Feature correlations with target</span></span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a>df_temp <span class="op">=</span> df.copy()</span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>df_temp[<span class="st">"Loan_Status"</span>] <span class="op">=</span> (df_temp[<span class="st">"Loan_Status"</span>] <span class="op">==</span> <span class="st">"Y"</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a>num_features <span class="op">=</span> [<span class="st">"ApplicantIncome"</span>, <span class="st">"CoapplicantIncome"</span>, <span class="st">"LoanAmount"</span>, </span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Loan_Amount_Term"</span>, <span class="st">"Credit_History"</span>, <span class="st">"TotalIncome"</span>]</span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>correlations <span class="op">=</span> df_temp[num_features <span class="op">+</span> [<span class="st">"Loan_Status"</span>]].corr()[<span class="st">"Loan_Status"</span>]</span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a>correlations <span class="op">=</span> correlations.drop(<span class="st">"Loan_Status"</span>).<span class="bu">abs</span>().sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Top 3 features correlated with approval:"</span>)</span>
+<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(correlations.head(<span class="dv">3</span>))</span>
+<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Create visualizations</span></span>
+<span id="cb56-28"><a href="#cb56-28" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>))</span>
+<span id="cb56-29"><a href="#cb56-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-30"><a href="#cb56-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 1: Loan approval distribution</span></span>
+<span id="cb56-31"><a href="#cb56-31" aria-hidden="true" tabindex="-1"></a>approval_counts <span class="op">=</span> df[<span class="st">"Loan_Status"</span>].value_counts().reindex([<span class="st">"Y"</span>, <span class="st">"N"</span>], fill_value<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb56-32"><a href="#cb56-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].bar([<span class="st">"Approved"</span>, <span class="st">"Denied"</span>], approval_counts.values, color<span class="op">=</span>[<span class="st">"0.25"</span>, <span class="st">"white"</span>],</span>
+<span id="cb56-33"><a href="#cb56-33" aria-hidden="true" tabindex="-1"></a>            edgecolor<span class="op">=</span><span class="st">"black"</span>, hatch<span class="op">=</span>[<span class="st">""</span>, <span class="st">"////"</span>])</span>
+<span id="cb56-34"><a href="#cb56-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">"Number of Applications"</span>)</span>
+<span id="cb56-35"><a href="#cb56-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"Loan Approval Distribution"</span>)</span>
+<span id="cb56-36"><a href="#cb56-36" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylim([<span class="dv">0</span>, approval_counts.<span class="bu">max</span>() <span class="op">*</span> <span class="fl">1.15</span>])</span>
+<span id="cb56-37"><a href="#cb56-37" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].text(</span>
+<span id="cb56-38"><a href="#cb56-38" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb56-39"><a href="#cb56-39" aria-hidden="true" tabindex="-1"></a>    approval_counts[<span class="st">"Y"</span>] <span class="op">+</span> <span class="dv">5</span>,</span>
+<span id="cb56-40"><a href="#cb56-40" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>approval_counts[<span class="st">'Y'</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">(</span><span class="sc">{</span><span class="bu">round</span>(approval_rate)<span class="sc">}</span><span class="ss">%)"</span>,</span>
+<span id="cb56-41"><a href="#cb56-41" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">"center"</span>,</span>
+<span id="cb56-42"><a href="#cb56-42" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb56-43"><a href="#cb56-43" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].text(</span>
+<span id="cb56-44"><a href="#cb56-44" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>,</span>
+<span id="cb56-45"><a href="#cb56-45" aria-hidden="true" tabindex="-1"></a>    approval_counts[<span class="st">"N"</span>] <span class="op">+</span> <span class="dv">5</span>,</span>
+<span id="cb56-46"><a href="#cb56-46" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>approval_counts[<span class="st">'N'</span>]<span class="sc">}</span><span class="ch">\n</span><span class="ss">(</span><span class="sc">{</span><span class="bu">round</span>(<span class="dv">100</span> <span class="op">-</span> approval_rate)<span class="sc">}</span><span class="ss">%)"</span>,</span>
+<span id="cb56-47"><a href="#cb56-47" aria-hidden="true" tabindex="-1"></a>    ha<span class="op">=</span><span class="st">"center"</span>,</span>
+<span id="cb56-48"><a href="#cb56-48" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb56-49"><a href="#cb56-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-50"><a href="#cb56-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot 2: Income by approval status</span></span>
+<span id="cb56-51"><a href="#cb56-51" aria-hidden="true" tabindex="-1"></a>denied_income <span class="op">=</span> df[df[<span class="st">"Loan_Status"</span>] <span class="op">==</span> <span class="st">"N"</span>][<span class="st">"ApplicantIncome"</span>]</span>
+<span id="cb56-52"><a href="#cb56-52" aria-hidden="true" tabindex="-1"></a>approved_income <span class="op">=</span> df[df[<span class="st">"Loan_Status"</span>] <span class="op">==</span> <span class="st">"Y"</span>][<span class="st">"ApplicantIncome"</span>]</span>
+<span id="cb56-53"><a href="#cb56-53" aria-hidden="true" tabindex="-1"></a>bp <span class="op">=</span> axes[<span class="dv">1</span>].boxplot(</span>
+<span id="cb56-54"><a href="#cb56-54" aria-hidden="true" tabindex="-1"></a>    [approved_income, denied_income], patch_artist<span class="op">=</span><span class="va">True</span></span>
+<span id="cb56-55"><a href="#cb56-55" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb56-56"><a href="#cb56-56" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xticks([<span class="dv">1</span>, <span class="dv">2</span>], [<span class="st">"Approved"</span>, <span class="st">"Denied"</span>])</span>
+<span id="cb56-57"><a href="#cb56-57" aria-hidden="true" tabindex="-1"></a>bp[<span class="st">"boxes"</span>][<span class="dv">0</span>].set_facecolor(<span class="st">"0.72"</span>)</span>
+<span id="cb56-58"><a href="#cb56-58" aria-hidden="true" tabindex="-1"></a>bp[<span class="st">"boxes"</span>][<span class="dv">1</span>].<span class="bu">set</span>(facecolor<span class="op">=</span><span class="st">"white"</span>, hatch<span class="op">=</span><span class="st">"////"</span>)</span>
+<span id="cb56-59"><a href="#cb56-59" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">"Applicant Income"</span>)</span>
+<span id="cb56-60"><a href="#cb56-60" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"Applicant Income by Loan Status"</span>)</span>
+<span id="cb56-61"><a href="#cb56-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-62"><a href="#cb56-62" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb56-63"><a href="#cb56-63" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"outputs/eda_analysis.pdf"</span>, dpi<span class="op">=</span><span class="dv">300</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb56-64"><a href="#cb56-64" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>The notebook prints the counts and statistics from the selected data and training split; no fixed output is asserted here.</em></p>
+<p>The printed counts, income summaries, and correlations describe only the training partition. The figure below is generated from that same partition, so its counts and income distributions match the numbers printed above. It illustrates the synthetic teaching fixture and is not evidence about actual lending decisions.</p>
+<figure id="fig:eda_analysis" data-latex-placement="H" class="figure">
+<img src="figures/ch02-eda_analysis.png" class="figure-img">
+<figcaption>
+EDA from the synthetic training partition. Left: approval counts. Right: applicant-income distributions by approval status.
+</figcaption>
+</figure>
+</section>
+<section id="feature-engineering-1" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering-1">Feature Engineering</h2>
+<p>The final stage derives financial ratios with explicit units, one-hot encodes nominal categories, and standardizes numerical features. The transformer is fitted on training rows only and reused on the holdout; unknown test categories are handled without refitting. The notebooks retain additional diagnostics and exported split tables.</p>
+<p>Three engineered features are added: total monthly household income, principal divided by annual household income, and monthly principal amortization divided by monthly income. Principal is <code>LoanAmount</code> multiplied by 1,000; annual income is 12 times monthly income. Positive income and term are required instead of adding arbitrary constants to denominators. The principal-only monthly burden excludes interest and existing debts, so it is not DTI or full debt-service coverage.</p>
+<p>The synthetic approval rule uses income and credit history rather than a real affordability policy. Engineered ratios demonstrate dimensional consistency; their predictive value must be evaluated rather than assumed. Demographic fields are retained for the technical walkthrough, with their governance and fairness implications discussed in Chapter&nbsp;11.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset convention: incomes are monthly currency units; LoanAmount is thousands</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="co"># of the SAME currency, and Loan_Amount_Term is months. Verify this for supplied CSVs.</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> frame <span class="kw">in</span> [df, loan_test]:</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    frame[<span class="st">'TotalIncome'</span>] <span class="op">=</span> frame[<span class="st">'ApplicantIncome'</span>] <span class="op">+</span> frame[<span class="st">'CoapplicantIncome'</span>]</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (frame[<span class="st">'TotalIncome'</span>] <span class="op">&lt;=</span> <span class="dv">0</span>).<span class="bu">any</span>() <span class="kw">or</span> (frame[<span class="st">'Loan_Amount_Term'</span>] <span class="op">&lt;=</span> <span class="dv">0</span>).<span class="bu">any</span>() <span class="kw">or</span> (frame[<span class="st">'LoanAmount'</span>] <span class="op">&lt;</span> <span class="dv">0</span>).<span class="bu">any</span>():</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'Ratios require positive household income / term and nonnegative principal.'</span>)</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>    principal <span class="op">=</span> frame[<span class="st">'LoanAmount'</span>] <span class="op">*</span> <span class="dv">1000</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>    frame[<span class="st">'Loan_to_Annual_Income'</span>] <span class="op">=</span> principal <span class="op">/</span> (<span class="dv">12</span> <span class="op">*</span> frame[<span class="st">'TotalIncome'</span>])</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Principal-only monthly burden, NOT a payment-to-income or debt-service ratio:</span></span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># interest, other debts, taxes and insurance are not observed here.</span></span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>    frame[<span class="st">'Monthly_Principal_to_Income'</span>] <span class="op">=</span> principal <span class="op">/</span> frame[<span class="st">'Loan_Amount_Term'</span>] <span class="op">/</span> frame[<span class="st">'TotalIncome'</span>]</span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encode nominal categories instead of inventing an ordinal ordering.</span></span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>cat_cols <span class="op">=</span> [<span class="st">'Gender'</span>, <span class="st">'Married'</span>, <span class="st">'Dependents'</span>, <span class="st">'Education'</span>, <span class="st">'Self_Employed'</span>, <span class="st">'Property_Area'</span>]</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>num_cols <span class="op">=</span> [<span class="st">'ApplicantIncome'</span>, <span class="st">'CoapplicantIncome'</span>, <span class="st">'LoanAmount'</span>, <span class="st">'Loan_Amount_Term'</span>,</span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Credit_History'</span>, <span class="st">'TotalIncome'</span>, <span class="st">'Loan_to_Annual_Income'</span>, <span class="st">'Monthly_Principal_to_Income'</span>]</span>
+<span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a>preprocessor <span class="op">=</span> ColumnTransformer([</span>
+<span id="cb57-18"><a href="#cb57-18" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'numeric'</span>, StandardScaler(), num_cols),</span>
+<span id="cb57-19"><a href="#cb57-19" aria-hidden="true" tabindex="-1"></a>    (<span class="st">'categorical'</span>, OneHotEncoder(handle_unknown<span class="op">=</span><span class="st">'ignore'</span>, sparse_output<span class="op">=</span><span class="va">False</span>), cat_cols),</span>
+<span id="cb57-20"><a href="#cb57-20" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb57-21"><a href="#cb57-21" aria-hidden="true" tabindex="-1"></a>X_train <span class="op">=</span> preprocessor.fit_transform(df)</span>
+<span id="cb57-22"><a href="#cb57-22" aria-hidden="true" tabindex="-1"></a>X_test <span class="op">=</span> preprocessor.transform(loan_test)</span>
+<span id="cb57-23"><a href="#cb57-23" aria-hidden="true" tabindex="-1"></a>all_features <span class="op">=</span> preprocessor.get_feature_names_out()</span>
+<span id="cb57-24"><a href="#cb57-24" aria-hidden="true" tabindex="-1"></a>df_scaled <span class="op">=</span> pd.DataFrame(X_train, columns<span class="op">=</span>all_features, index<span class="op">=</span>df.index)</span>
+<span id="cb57-25"><a href="#cb57-25" aria-hidden="true" tabindex="-1"></a>test_scaled <span class="op">=</span> pd.DataFrame(X_test, columns<span class="op">=</span>all_features, index<span class="op">=</span>loan_test.index)</span>
+<span id="cb57-26"><a href="#cb57-26" aria-hidden="true" tabindex="-1"></a>df_scaled[<span class="st">'Loan_Status'</span>] <span class="op">=</span> df[<span class="st">'Loan_Status'</span>]</span>
+<span id="cb57-27"><a href="#cb57-27" aria-hidden="true" tabindex="-1"></a>test_scaled[<span class="st">'Loan_Status'</span>] <span class="op">=</span> loan_test[<span class="st">'Loan_Status'</span>]</span>
+<span id="cb57-28"><a href="#cb57-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-29"><a href="#cb57-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Final feature set: </span><span class="sc">{</span><span class="bu">len</span>(all_features)<span class="sc">}</span><span class="ss"> features"</span>)</span>
+<span id="cb57-30"><a href="#cb57-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Original numerical: </span><span class="sc">{</span><span class="bu">len</span>(num_cols) <span class="op">-</span> <span class="dv">3</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb57-31"><a href="#cb57-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"  Engineered features: 3"</span>)</span>
+<span id="cb57-32"><a href="#cb57-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  One-hot categorical: </span><span class="sc">{</span><span class="bu">len</span>(all_features) <span class="op">-</span> <span class="bu">len</span>(num_cols)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb57-33"><a href="#cb57-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Preserve split membership in separate outputs. Refit all preprocessing inside</span></span>
+<span id="cb57-34"><a href="#cb57-34" aria-hidden="true" tabindex="-1"></a><span class="co"># each CV training fold if these data are later used for model selection.</span></span>
+<span id="cb57-35"><a href="#cb57-35" aria-hidden="true" tabindex="-1"></a>df_scaled.to_csv(<span class="st">'data/loan_preprocessed_train.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb57-36"><a href="#cb57-36" aria-hidden="true" tabindex="-1"></a>test_scaled.to_csv(<span class="st">'data/loan_preprocessed_test.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>The notebook prints the counts and statistics from the selected data and training split; no fixed output is asserted here.</em></p>
+<p>The output contains eight numerical features (five original and three engineered) plus one column per category learned by the training-fitted encoder. The final count therefore depends on the observed training categories. Numerical columns are standardized; one-hot columns retain their indicator values. Separate training and test files preserve split membership. If these features are used for cross-validation, relearn every fitted transformation within each training fold from the original rows.</p>
+<section id="preprocessing-impact" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="preprocessing-impact">Preprocessing Impact</h3>
+<p>The tutorial now separates descriptive exploration from held-out evaluation. Its unit-consistent ratios and training-fitted encodings prepare inputs for approval prediction; they do not establish default risk, affordability, causal effects, or fairness. Inspect the actual printed diagnostics and evaluate a downstream model before drawing conclusions about predictive value.</p>
+</section>
+</section>
+<section id="summary" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="summary">Summary</h2>
+<p>You took a synthetic loan-application dataset from raw file to model-ready table: you split the data first, imputed missing values with statistics fitted on the training rows, explored the variables, and engineered unit-consistent ratios and one-hot encodings, keeping the test rows separate throughout. The Chapter 3 tutorial picks up from prepared data and trains models.</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-49018680cf534023b6ae0f4e933c475d" class="csl-entry" role="listitem">
+Hyndman, Rob, and G. Athanasopoulos. 2021. <em>Forecasting: Principles and Practice</em>. 3rd ed. Australia: OTexts.
+</div>
+<div id="ref-Shleifer2000" class="csl-entry" role="listitem">
+Shleifer, A. 2000. <em>Inefficient Markets: An Introduction to Behavioral Finance</em>. Oxford University Press.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

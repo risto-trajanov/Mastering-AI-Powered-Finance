@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Chapter 8: AI-Powered Equity Investing – Mastering AI-Powered Finance: Companion</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch02.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch08.html">8. AI-Powered Equity Investing</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Mastering AI-Powered Finance: Companion</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Chapters</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. The Importance of Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Machine Learning Techniques</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Generative AI in Finance</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. AI Agents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. AI and Algorithmic Trading Strategies</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Socio-Technical Transformation of Algo Trading</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch08.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">8. AI-Powered Equity Investing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/ch09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. AI in Portfolio Optimization</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ai-tutorial-part-1-data-and-factor-based-stock-selection" id="toc-ai-tutorial-part-1-data-and-factor-based-stock-selection" class="nav-link active" data-scroll-target="#ai-tutorial-part-1-data-and-factor-based-stock-selection">AI Tutorial, Part 1: Data and Factor-Based Stock Selection</a>
+  <ul class="collapse">
+  <li><a href="#environment-setup-and-data-acquisition" id="toc-environment-setup-and-data-acquisition" class="nav-link" data-scroll-target="#environment-setup-and-data-acquisition">Environment Setup and Data Acquisition</a>
+  <ul class="collapse">
+  <li><a href="#computing-returns-and-fundamental-data" id="toc-computing-returns-and-fundamental-data" class="nav-link" data-scroll-target="#computing-returns-and-fundamental-data">Computing Returns and Fundamental Data</a></li>
+  </ul></li>
+  <li><a href="#factor-based-stock-ranking-and-screening" id="toc-factor-based-stock-ranking-and-screening" class="nav-link" data-scroll-target="#factor-based-stock-ranking-and-screening">Factor-Based Stock Ranking and Screening</a>
+  <ul class="collapse">
+  <li><a href="#stock-selection-top-quintile" id="toc-stock-selection-top-quintile" class="nav-link" data-scroll-target="#stock-selection-top-quintile">Stock Selection: Top Quintile</a></li>
+  </ul></li>
+  <li><a href="#where-part-2-continues" id="toc-where-part-2-continues" class="nav-link" data-scroll-target="#where-part-2-continues">Where Part 2 Continues</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/ch02.html">Chapters</a></li><li class="breadcrumb-item"><a href="../chapters/ch08.html">8. AI-Powered Equity Investing</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 8: AI-Powered Equity Investing</h1>
+<p class="subtitle lead">AI tutorial</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This page accompanies Chapter 8 of <em>Mastering AI-Powered Finance</em>. Use cases, practical activities, and discussion topics are in the printed chapter. Section, equation, and figure numbers that are not on this page refer to the printed chapter.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Before you run this">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Before you run this
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Notebook:</strong> <a href="../downloads/chapter-08-ai-powered-equity-investing.ipynb" download="chapter-08-ai-powered-equity-investing.ipynb">Download the notebook</a> or <a href="../downloads/chapter-08-ai-powered-equity-investing.zip" download="chapter-08-ai-powered-equity-investing.zip">the notebook with its data files</a>. The notebook is the reviewed, runnable version of this tutorial, with saved outputs; its code can differ in places from the listings on this page.</li>
+<li><strong>Packages:</strong> <code>matplotlib</code>, <code>numpy</code>, <code>pandas</code>, <code>scikit-learn</code>, <code>scipy</code>, <code>yfinance</code>.</li>
+<li><strong>Data:</strong> <code>data/fundamentals_snapshot.csv</code>, <code>data/prices_2019_2024.csv</code> (included in the download with data files).</li>
+<li><strong>API key:</strong> none needed.</li>
+</ul>
+</div>
+</div>
+<section id="ai-tutorial-part-1-data-and-factor-based-stock-selection" class="level1">
+<h1>AI Tutorial, Part 1: Data and Factor-Based Stock Selection</h1>
+<p>This tutorial implements the first half of an equity investment pipeline: data acquisition and factor-based stock selection. Part 2, which accompanies Chapter 9, continues from the selected stocks to constrained portfolio optimization, backtesting, and performance evaluation. We use real market data from S&amp;P 500 constituents, demonstrating practical techniques that can be extended to production systems.</p>
+<p>The implementation emphasizes reproducibility and transparency. All code uses open-source libraries available via pip, and data is sourced from Yahoo Finance (freely accessible). While production systems would incorporate additional data sources and more sophisticated models, this tutorial establishes the foundational workflow that underlies institutional equity strategies.</p>
+<p><strong>Required packages:</strong> Install the following before running the tutorial code:</p>
+<section id="environment-setup-and-data-acquisition" class="level2">
+<h2 class="anchored" data-anchor-id="environment-setup-and-data-acquisition">Environment Setup and Data Acquisition</h2>
+<p>This first block downloads five years of real daily prices for an equity universe and defines the workflow’s data backbone. Unlike most tutorials in this book, the data here is <em>not</em> synthetic: <code>yf.download</code> pulls actual adjusted-close prices from Yahoo Finance for the 52 tickers in <code>UNIVERSE</code> (eight names each from technology, healthcare, financials, consumer, and industrials, plus energy/materials and utilities/REITs) and for the <code>BENCHMARK</code> ticker <code>SPY</code>. The window runs from <code>2019-01-01</code> to <code>2024-01-01</code>, so the prices span the pre-pandemic market, the COVID crash and recovery, the 2021 mega-cap rally, and the 2022 drawdown. Adjusted close is used (rather than raw close) so that splits and dividends do not show up as spurious returns.</p>
+<p>The <code>download_stock_data</code> function requests adjusted closes explicitly, verifies the benchmark and preserves missing observations. Stock eligibility is determined separately at each historical decision using only its trailing window; filtering by full-period missingness would use future information. The requested universe contains 52 stocks plus SPY, although data availability depends on the vendor. This fixed universe still carries survivorship bias. The following listings print results from the downloaded data; historical numerical tables are omitted because they do not represent the corrected workflow or the current fundamental snapshot.</p>
+<p>This block is real-data acquisition with no injected structure; the factors, returns, and portfolios built later all derive from these prices. In a production research stack, the Yahoo feed would be replaced by a point-in-time vendor (CRSP, Compustat, Bloomberg) that records which stocks were in the index on each historical date, which is exactly the survivorship correction the next paragraph describes. The fundamental-data and factor steps that follow connect back to the factor models introduced in the Conceptual Foundations section, and Part 2 feeds them into the mean-variance framework of Chapter 9.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a fixed illustrative investment universe: 52 stocks across sectors.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Historical membership is not reconstructed, so survivorship bias remains.</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>UNIVERSE <span class="op">=</span> [</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Technology</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'AAPL'</span>, <span class="st">'MSFT'</span>, <span class="st">'GOOGL'</span>, <span class="st">'META'</span>, <span class="st">'NVDA'</span>, <span class="st">'AVGO'</span>, <span class="st">'CSCO'</span>, <span class="st">'ORCL'</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Healthcare</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'JNJ'</span>, <span class="st">'UNH'</span>, <span class="st">'PFE'</span>, <span class="st">'ABBV'</span>, <span class="st">'MRK'</span>, <span class="st">'LLY'</span>, <span class="st">'TMO'</span>, <span class="st">'ABT'</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Financials</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="st">'JPM'</span>, <span class="st">'BAC'</span>, <span class="st">'WFC'</span>, <span class="st">'GS'</span>, <span class="st">'MS'</span>, <span class="st">'BLK'</span>, <span class="st">'AXP'</span>, <span class="st">'C'</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Consumer</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'AMZN'</span>, <span class="st">'HD'</span>, <span class="st">'MCD'</span>, <span class="st">'NKE'</span>, <span class="st">'SBUX'</span>, <span class="st">'TGT'</span>, <span class="st">'COST'</span>, <span class="st">'WMT'</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Industrials</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">'CAT'</span>, <span class="st">'HON'</span>, <span class="st">'UPS'</span>, <span class="st">'RTX'</span>, <span class="st">'LMT'</span>, <span class="st">'GE'</span>, <span class="st">'MMM'</span>, <span class="st">'BA'</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Energy &amp; Materials</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">'XOM'</span>, <span class="st">'CVX'</span>, <span class="st">'COP'</span>, <span class="st">'SLB'</span>, <span class="st">'LIN'</span>, <span class="st">'APD'</span>, <span class="st">'ECL'</span>, <span class="st">'SHW'</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Utilities &amp; REITs</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">'NEE'</span>, <span class="st">'DUK'</span>, <span class="st">'SO'</span>, <span class="st">'PLD'</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Benchmark: S&amp;P 500 ETF</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>BENCHMARK <span class="op">=</span> <span class="st">'SPY'</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> download_stock_data(tickers, start_date, end_date):</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Download adjusted close prices for a list of tickers."""</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    all_tickers <span class="op">=</span> <span class="bu">list</span>(<span class="bu">dict</span>.fromkeys(<span class="bu">list</span>(tickers) <span class="op">+</span> [BENCHMARK]))</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    snapshot <span class="op">=</span> Path(<span class="st">'data/prices_2019_2024.csv'</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> snapshot.exists() <span class="kw">and</span> os.environ.get(<span class="st">'REFRESH_MARKET_DATA'</span>) <span class="op">!=</span> <span class="st">'1'</span>:</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> pd.read_csv(snapshot, index_col<span class="op">=</span><span class="dv">0</span>, parse_dates<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> data.reindex(columns<span class="op">=</span>all_tickers).sort_index()</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        raw <span class="op">=</span> yf.download(all_tickers, start<span class="op">=</span>start_date, end<span class="op">=</span>end_date,</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>                          auto_adjust<span class="op">=</span><span class="va">False</span>, progress<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> raw <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> raw.empty <span class="kw">or</span> <span class="st">'Adj Close'</span> <span class="kw">not</span> <span class="kw">in</span> raw.columns.get_level_values(<span class="dv">0</span>):</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"No adjusted prices returned; check the data service."</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> raw[<span class="st">'Adj Close'</span>].reindex(columns<span class="op">=</span>all_tickers).sort_index()</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> data[BENCHMARK].dropna().empty:</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Benchmark adjusted prices are unavailable."</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (data <span class="op">&lt;=</span> <span class="dv">0</span>).<span class="bu">any</span>().<span class="bu">any</span>() <span class="kw">or</span> np.isinf(data.to_numpy()).<span class="bu">any</span>():</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Adjusted prices must be positive and finite where observed."</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Do not select stocks using missingness over the full future test period.</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Each rebalance will use only its trailing history to establish eligibility.</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Download 5 years of data for backtesting</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>END_DATE <span class="op">=</span> <span class="st">'2024-01-01'</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>START_DATE <span class="op">=</span> <span class="st">'2019-01-01'</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Downloading stock data..."</span>)</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>prices <span class="op">=</span> download_stock_data(UNIVERSE, START_DATE, END_DATE)</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Downloaded data for </span><span class="sc">{</span><span class="bu">len</span>(prices.columns)<span class="op">-</span><span class="dv">1</span><span class="sc">}</span><span class="ss"> stocks plus benchmark"</span>)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Date range: </span><span class="sc">{</span>prices<span class="sc">.</span>index[<span class="dv">0</span>]<span class="sc">.</span>date()<span class="sc">}</span><span class="ss"> to </span><span class="sc">{</span>prices<span class="sc">.</span>index[<span class="op">-</span><span class="dv">1</span>]<span class="sc">.</span>date()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total trading days: </span><span class="sc">{</span><span class="bu">len</span>(prices)<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Survivorship Bias Warning:</strong> This tutorial uses current S&amp;P 500 constituents, which introduces survivorship bias because we only include companies that survived and thrived through 2024. Companies that failed, were acquired, or dropped from the index are excluded. This systematically overstates historical returns because we exclude poor performers ex post. In production research, one should use point-in-time index membership data (available from providers like CRSP or Compustat) that reflects which stocks were actually in the index at each historical date. The magnitude of survivorship bias can be 1–2% annually for strategies tested over multi-year periods.</p>
+<section id="computing-returns-and-fundamental-data" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="computing-returns-and-fundamental-data">Computing Returns and Fundamental Data</h3>
+<p>This block turns the price panel into the two raw materials the rest of the pipeline needs: a return series for risk and momentum estimation, and a snapshot of fundamentals for the value and quality factors. <code>compute_returns</code> produces both <code>daily_returns</code> and <code>monthly_returns</code>, the latter sampled on the last trading day of each month. Everything downstream in this chapter, covariance estimation included, runs on the monthly series and annualizes by twelve; <code>daily_returns</code> is returned for your own extensions and is not used again below. <code>get_fundamental_data</code> then loads the bundled fundamentals snapshot, dated 21 September 2026, for each ticker’s <code>pe_ratio</code> (trailing price-to-earnings), <code>pb_ratio</code> (price-to-book), <code>roe</code> (return on equity), <code>debt_to_equity</code>, <code>market_cap</code>, <code>dividend_yield</code>, <code>beta</code>, and <code>profit_margin</code>. These map directly onto the valuation and quality metrics defined in the Fundamental Analysis section.</p>
+<p>The fundamentals are a <em>single dated snapshot</em>, taken on 21 September 2026 and bundled with the notebook so the ranking below reproduces. Because that date is later than the 2019–2023 price window, the snapshot is not point-in-time data for this period: it demonstrates factor-ranking and optimization mechanics and must not be applied to past decisions. The historical backtest below defaults to price-only momentum and low-volatility factors. A four-factor backtest requires a callable that returns as-reported fundamentals available at each signal date. A current DataFrame is rejected. Extremely high ROE or P/B can reflect small or negative book equity; nonpositive valuation denominators and negative debt/equity are excluded from the corresponding score.</p>
+<p>In production, fundamentals would come from a provider that timestamps each figure to its filing date (Bloomberg, FactSet, Refinitiv) and would be refreshed quarterly so that the backtest only ever sees data that existed at the time. The factor construction in the next subsection consumes both objects produced here, <code>monthly_returns</code> for momentum and volatility, <code>fundamentals</code> for value and quality.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_returns(prices):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute daily and monthly returns from prices."""</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    daily_returns <span class="op">=</span> prices.pct_change(fill_method<span class="op">=</span><span class="va">None</span>).iloc[<span class="dv">1</span>:]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Monthly returns (last trading day of each month)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Keep the actual last row: resample().last() would skip missing closes.</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    monthly_prices <span class="op">=</span> prices.resample(pd.offsets.MonthEnd()).agg(<span class="kw">lambda</span> x: x.iloc[<span class="op">-</span><span class="dv">1</span>] <span class="cf">if</span> <span class="bu">len</span>(x) <span class="cf">else</span> np.nan)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    monthly_returns <span class="op">=</span> monthly_prices.pct_change(fill_method<span class="op">=</span><span class="va">None</span>).iloc[<span class="dv">1</span>:]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> daily_returns, monthly_returns</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>daily_returns, monthly_returns <span class="op">=</span> compute_returns(prices)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_fundamental_data(tickers):</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Retrieve fundamental data for factor construction."""</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># A pinned snapshot with a stated as-of date. yf.Ticker().info returns</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># whatever the market looks like today, with no historical as-of, so a</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># live fetch silently changes every ranking and weight below.</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    snapshot <span class="op">=</span> Path(<span class="st">'data/fundamentals_snapshot.csv'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> snapshot.exists() <span class="kw">and</span> os.environ.get(<span class="st">'REFRESH_MARKET_DATA'</span>) <span class="op">!=</span> <span class="st">'1'</span>:</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.read_csv(snapshot, index_col<span class="op">=</span><span class="st">'ticker'</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    fundamentals <span class="op">=</span> []</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> ticker <span class="kw">in</span> tickers:</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> ticker <span class="op">==</span> BENCHMARK:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>            stock <span class="op">=</span> yf.Ticker(ticker)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>            info <span class="op">=</span> stock.info</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>            fundamentals.append({</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>                <span class="st">'ticker'</span>: ticker,</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                <span class="st">'pe_ratio'</span>: info.get(<span class="st">'trailingPE'</span>, np.nan),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                <span class="st">'pb_ratio'</span>: info.get(<span class="st">'priceToBook'</span>, np.nan),</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                <span class="st">'roe'</span>: info.get(<span class="st">'returnOnEquity'</span>, np.nan),</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>                <span class="st">'debt_to_equity'</span>: info.get(<span class="st">'debtToEquity'</span>, np.nan),</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                <span class="st">'market_cap'</span>: info.get(<span class="st">'marketCap'</span>, np.nan),</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                <span class="st">'dividend_yield'</span>: info.get(<span class="st">'dividendYield'</span>, np.nan),</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                <span class="st">'beta'</span>: info.get(<span class="st">'beta'</span>, np.nan),</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                <span class="st">'profit_margin'</span>: info.get(<span class="st">'profitMargins'</span>, np.nan)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>            warnings.warn(<span class="ss">f'Fundamentals unavailable for </span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> fundamentals:</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'No fundamentals returned; retry the live snapshot separately.'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame(fundamentals).set_index(<span class="st">'ticker'</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Fetching fundamental data..."</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>fundamentals <span class="op">=</span> get_fundamental_data(UNIVERSE)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Retrieved fundamentals for </span><span class="sc">{</span><span class="bu">len</span>(fundamentals)<span class="sc">}</span><span class="ss"> stocks"</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Sample fundamental data:"</span>)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(fundamentals[[<span class="st">'pe_ratio'</span>, <span class="st">'pb_ratio'</span>, <span class="st">'roe'</span>, <span class="st">'market_cap'</span>]].head(<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="factor-based-stock-ranking-and-screening" class="level2">
+<h2 class="anchored" data-anchor-id="factor-based-stock-ranking-and-screening">Factor-Based Stock Ranking and Screening</h2>
+<p>This block scores every stock on four factors, value, quality, momentum, and low volatility, and combines them into a single composite rank, operationalizing the factor models from the Factor-Based Investing section. Each raw factor is turned into a cross-sectional percentile via <code>rank_normalize</code> (so a score of 1.0 means best-in-universe and 0.5 is median), which makes the four factors comparable before they are blended. Value uses inverted P/E and P/B (cheaper is better), quality averages ROE, low leverage, and profit margin, momentum is the 12-month return skipping the most recent month (<code>compute_momentum_factor</code> with <code>lookback=12, skip=1</code>, a twelve-return window with the latest month skipped, requiring thirteen months of data), and low volatility is the negative of trailing annualized standard deviation so that calmer stocks score higher.</p>
+<p>Two modeling choices shape the rankings. First, P/E, P/B and debt/equity are clipped before percentile ranking. Percentile ranks already limit sensitivity to outlier magnitude; clipping creates ties above each cap and sacrifices distinctions at the extremes, rather than preventing an extreme value from dominating all ranks. Second, the snapshot demonstration uses fixed weights (momentum 0.30, value 0.25, quality 0.25, low volatility 0.20). Missing scores are imputed at neutral 0.5; this makes an explicit missing-data assumption and need not be harmless. The historical price-only variant instead assigns 60% to momentum and 40% to low volatility.</p>
+<p>The printed top-15 table sorts by the weighted composite score. Its identities, scores and order depend on the acquired snapshot and history; inspect them rather than assuming a fixed ranking. This mixed-date mechanics demonstration is not a historical investment signal. Robustness checks can vary clipping thresholds, missing-data treatment and factor weights.</p>
+<p>In a production factor model, these raw factors would be sector-neutralized (ranked within industry rather than across the whole universe, to avoid a value tilt becoming an implicit bet against expensive sectors), standardized as z-scores rather than percentiles, and the weights would come from a factor-premium model or Black-Litterman rather than being set by hand, as the Multi-Factor Portfolio Construction activity at the end of Chapter 9 spells out.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_momentum_factor(returns, lookback<span class="op">=</span><span class="dv">12</span>, skip<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute momentum factor: cumulative return over lookback months,"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> lookback <span class="op">&lt;</span> <span class="dv">1</span> <span class="kw">or</span> skip <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'lookback must be positive and skip nonnegative.'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(returns) <span class="op">&lt;</span> lookback <span class="op">+</span> skip:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.Series(dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use returns from t-lookback-skip to t-skip</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    momentum_returns <span class="op">=</span> returns.iloc[<span class="op">-</span>(lookback<span class="op">+</span>skip):<span class="bu">len</span>(returns)<span class="op">-</span>skip]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Cumulative return over the period</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    cumulative <span class="op">=</span> (<span class="dv">1</span> <span class="op">+</span> momentum_returns).prod(min_count<span class="op">=</span>lookback) <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cumulative</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_volatility_factor(returns, lookback<span class="op">=</span><span class="dv">12</span>):</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute volatility factor: annualized standard deviation."""</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(returns) <span class="op">&lt;</span> lookback:</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> pd.Series(dtype<span class="op">=</span><span class="bu">float</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    recent_returns <span class="op">=</span> returns.iloc[<span class="op">-</span>lookback:]</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    volatility <span class="op">=</span> recent_returns.std() <span class="op">*</span> np.sqrt(<span class="dv">12</span>)  <span class="co"># Annualize</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>volatility  <span class="co"># Negative so higher score = lower vol</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rank_normalize(series):</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Convert values to percentile ranks (0 to 1)."""</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> series.rank(pct<span class="op">=</span><span class="va">True</span>, na_option<span class="op">=</span><span class="st">'keep'</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_composite_score(fundamentals, monthly_returns, weights<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Compute composite factor score for stock ranking."""</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> weights <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        weights <span class="op">=</span> {</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            <span class="st">'value'</span>: <span class="fl">0.25</span>,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            <span class="st">'quality'</span>: <span class="fl">0.25</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="st">'momentum'</span>: <span class="fl">0.30</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>            <span class="st">'low_vol'</span>: <span class="fl">0.20</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    factor_names <span class="op">=</span> [<span class="st">'value'</span>, <span class="st">'quality'</span>, <span class="st">'momentum'</span>, <span class="st">'low_vol'</span>]</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">set</span>(weights) <span class="op">!=</span> <span class="bu">set</span>(factor_names) <span class="kw">or</span> <span class="bu">any</span>(v <span class="op">&lt;</span> <span class="dv">0</span> <span class="cf">for</span> v <span class="kw">in</span> weights.values()) <span class="kw">or</span> <span class="kw">not</span> np.isclose(<span class="bu">sum</span>(weights.values()), <span class="dv">1</span>):</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'Factor weights must be nonnegative and sum to one.'</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> pd.DataFrame(index<span class="op">=</span>fundamentals.index)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Value factor: inverse of P/E and P/B (lower is better)</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Nonpositive valuation ratios are not cheapness signals. Clipping reduces</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># outlier impact but ties all observations above each cap (information lost).</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>    pe_capped <span class="op">=</span> fundamentals[<span class="st">'pe_ratio'</span>].where(fundamentals[<span class="st">'pe_ratio'</span>] <span class="op">&gt;</span> <span class="dv">0</span>).clip(upper<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    pb_capped <span class="op">=</span> fundamentals[<span class="st">'pb_ratio'</span>].where(fundamentals[<span class="st">'pb_ratio'</span>] <span class="op">&gt;</span> <span class="dv">0</span>).clip(upper<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'value_pe'</span>] <span class="op">=</span> rank_normalize(<span class="op">-</span>pe_capped)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'value_pb'</span>] <span class="op">=</span> rank_normalize(<span class="op">-</span>pb_capped)</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'value'</span>] <span class="op">=</span> (scores[<span class="st">'value_pe'</span>] <span class="op">+</span> scores[<span class="st">'value_pb'</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Quality factor: high ROE, low leverage, high margins</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'quality_roe'</span>] <span class="op">=</span> rank_normalize(fundamentals[<span class="st">'roe'</span>])</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'quality_debt'</span>] <span class="op">=</span> rank_normalize(<span class="op">-</span>fundamentals[<span class="st">'debt_to_equity'</span>].where(</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>        fundamentals[<span class="st">'debt_to_equity'</span>] <span class="op">&gt;=</span> <span class="dv">0</span>).clip(upper<span class="op">=</span><span class="dv">500</span>))</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'quality_margin'</span>] <span class="op">=</span> rank_normalize(fundamentals[<span class="st">'profit_margin'</span>])</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'quality'</span>] <span class="op">=</span> (scores[<span class="st">'quality_roe'</span>] <span class="op">+</span> scores[<span class="st">'quality_debt'</span>] <span class="op">+</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>                         scores[<span class="st">'quality_margin'</span>]) <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Momentum factor</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    momentum <span class="op">=</span> compute_momentum_factor(monthly_returns.drop(columns<span class="op">=</span>[BENCHMARK],</span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>                                       errors<span class="op">=</span><span class="st">'ignore'</span>))</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'momentum'</span>] <span class="op">=</span> rank_normalize(momentum)</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Low volatility factor</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    low_vol <span class="op">=</span> compute_volatility_factor(monthly_returns.drop(columns<span class="op">=</span>[BENCHMARK],</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>                                        errors<span class="op">=</span><span class="st">'ignore'</span>))</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'low_vol'</span>] <span class="op">=</span> rank_normalize(low_vol)</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Composite score (weighted average of factor ranks)</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'composite'</span>] <span class="op">=</span> (</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>        weights[<span class="st">'value'</span>] <span class="op">*</span> scores[<span class="st">'value'</span>].fillna(<span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>        weights[<span class="st">'quality'</span>] <span class="op">*</span> scores[<span class="st">'quality'</span>].fillna(<span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>        weights[<span class="st">'momentum'</span>] <span class="op">*</span> scores[<span class="st">'momentum'</span>].fillna(<span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>        weights[<span class="st">'low_vol'</span>] <span class="op">*</span> scores[<span class="st">'low_vol'</span>].fillna(<span class="fl">0.5</span>)</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Final rank</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>    scores[<span class="st">'rank'</span>] <span class="op">=</span> scores[<span class="st">'composite'</span>].rank(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> scores.sort_values(<span class="st">'composite'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute factor scores</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a><span class="co"># This snapshot mixes live fundamentals with the fixed historical price window.</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="co"># It demonstrates ranking mechanics, not a historical trade recommendation.</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>ranking_universe <span class="op">=</span> fundamentals.index.intersection(monthly_returns.columns)</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>ranking_universe <span class="op">=</span> ranking_universe[monthly_returns[ranking_universe].tail(<span class="dv">13</span>).notna().<span class="bu">all</span>()]</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>factor_scores <span class="op">=</span> compute_composite_score(fundamentals.loc[ranking_universe], monthly_returns[ranking_universe])</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Factor-Based Stock Ranking (Top 15):"</span>)</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(factor_scores[[<span class="st">'value'</span>, <span class="st">'quality'</span>, <span class="st">'momentum'</span>, <span class="st">'low_vol'</span>,</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>                     <span class="st">'composite'</span>, <span class="st">'rank'</span>]].head(<span class="dv">15</span>).<span class="bu">round</span>(<span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="stock-selection-top-quintile" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="stock-selection-top-quintile">Stock Selection: Top Quintile</h3>
+<p>This short block converts the ranking into a held portfolio by taking the top names, mirroring the long-leg construction of a factor portfolio described in the Factor Construction discussion. <code>select_stocks</code> sorts by <code>composite</code> and keeps the top <code>percentile</code> (here 20%), with a floor of <code>max(10, ...)</code> so the portfolio never shrinks below ten holdings; with 50 stocks the result is the top ten. The printed comparison of average factor scores for the selected ten against the full universe is the key diagnostic.</p>
+<p>Read the selected-versus-universe averages as a tilt check. With <span class="math inline">\(n\)</span> nonmissing observations, percentile ranks average <span class="math inline">\((n+1)/(2n)\)</span> rather than exactly 0.5; clipping and missing-data imputation can also affect the reported averages. Compare each selected-factor average with the actual universe average to see whether the composite produces the intended exposures. These diagnostics can be repeated at each rebalance.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> select_stocks(factor_scores, n_stocks<span class="op">=</span><span class="va">None</span>, percentile<span class="op">=</span><span class="fl">0.20</span>):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Select top-ranked stocks based on factor scores."""</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> <span class="dv">0</span> <span class="op">&lt;</span> percentile <span class="op">&lt;=</span> <span class="dv">1</span> <span class="kw">or</span> (n_stocks <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> n_stocks <span class="op">&lt;</span> <span class="dv">1</span>):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'Select a positive stock count or percentile in (0, 1].'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    sorted_scores <span class="op">=</span> factor_scores.dropna(subset<span class="op">=</span>[<span class="st">'composite'</span>]).sort_values(<span class="st">'composite'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> sorted_scores.empty:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'No eligible stocks to select.'</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n_stocks <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        n_stocks <span class="op">=</span> <span class="bu">max</span>(<span class="dv">10</span>, <span class="bu">int</span>(<span class="bu">len</span>(sorted_scores) <span class="op">*</span> percentile))</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    selected <span class="op">=</span> sorted_scores.head(n_stocks).index.tolist()</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> selected</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Select top quintile</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>selected_stocks <span class="op">=</span> select_stocks(factor_scores, percentile<span class="op">=</span><span class="fl">0.20</span>)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Selected Portfolio (</span><span class="sc">{</span><span class="bu">len</span>(selected_stocks)<span class="sc">}</span><span class="ss"> stocks):"</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(selected_stocks)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Get factor exposures for selected stocks</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>selected_scores <span class="op">=</span> factor_scores.loc[selected_stocks]</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Average factor scores for selected portfolio:"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(selected_scores[[<span class="st">'value'</span>, <span class="st">'quality'</span>, <span class="st">'momentum'</span>, <span class="st">'low_vol'</span>]].mean().<span class="bu">round</span>(<span class="dv">3</span>))</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Average factor scores for full universe:"</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(factor_scores[[<span class="st">'value'</span>, <span class="st">'quality'</span>, <span class="st">'momentum'</span>, <span class="st">'low_vol'</span>]].mean().<span class="bu">round</span>(<span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The selected portfolio's factor averages describe this snapshot only; they do not establish that the same stocks or exposures were available historically.</p>
+</section>
+</section>
+<section id="where-part-2-continues" class="level2">
+<h2 class="anchored" data-anchor-id="where-part-2-continues">Where Part 2 Continues</h2>
+<p>The ten stocks selected here, together with the price panel and return series built in the first block, are the inputs to Part 2 of the tutorial on the Chapter 9 page. Part 2 estimates shrunk expected returns and covariances, solves a constrained mean-variance problem, backtests the strategy with lagged monthly rebalancing and transaction costs, and evaluates the result against SPY. Run the code on this page first; Part 2 assumes its variables are already defined.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
